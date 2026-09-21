@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Alex &amp; Victory：怪物岛探险（第一关原型）</title>
+<style>
+  html, body { margin:0; padding:0; width:100%; height:100%; overflow:hidden;
+    touch-action:none; user-select:none; -webkit-user-select:none; background:#87c5ea;
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  #app, #touchLayer { position:fixed; inset:0; }
+  #touchLayer { z-index:5; }
+  #joyBase { position:absolute; width:110px; height:110px; border-radius:50%;
+    border:3px solid rgba(255,255,255,.7); background:rgba(0,0,0,.18); display:none; z-index:6; }
+  #joyKnob { position:absolute; width:48px; height:48px; border-radius:50%;
+    background:rgba(255,255,255,.85); display:none; z-index:7; }
+  #hud { position:fixed; inset:0; z-index:10; pointer-events:none; }
+  .hpwrap { position:absolute; height:16px; background:rgba(0,0,0,.45); border-radius:8px; overflow:hidden; }
+  .hpbar { height:100%; width:100%; border-radius:8px; transition:width .15s; }
+  #playerHPWrap { left:16px; top:16px; width:min(34vw,220px); }
+  #playerHPBar { background:linear-gradient(90deg,#3ad66b,#8ff07a); }
+  #playerHPLabel { position:absolute; left:18px; top:34px; color:#fff; font-size:12px; text-shadow:0 1px 2px #000; }
+  #monsterWrap { position:absolute; left:50%; transform:translateX(-50%); top:12px; width:min(46vw,300px); text-align:center; }
+  #monsterName { color:#ffd7d7; font-size:13px; text-shadow:0 1px 3px #000; margin-bottom:3px; }
+  #monsterHPWrap { width:100%; }
+  #monsterHPBar { background:linear-gradient(90deg,#e0453a,#ff8a5c); }
+  #crystalBox { position:absolute; right:16px; top:16px; color:#9ff3ff; font-size:16px; text-shadow:0 1px 3px #000; }
+  #hint { position:absolute; left:50%; transform:translateX(-50%); top:64px; max-width:86vw;
+    color:#fff; font-size:15px; text-align:center; text-shadow:0 1px 3px #000;
+    background:rgba(0,0,0,.35); padding:6px 14px; border-radius:10px; transition:opacity .3s; }
+  #btnSkill { position:absolute; right:26px; bottom:34px; width:92px; height:92px; border-radius:50%;
+    border:4px solid rgba(255,255,255,.8); background:rgba(40,40,80,.55);
+    color:#fff; font-size:15px; font-weight:700; pointer-events:auto;
+    display:flex; align-items:center; justify-content:center; flex-direction:column; z-index:12; }
+  #btnSkill:active { background:rgba(90,90,160,.7); }
+  #cdOverlay { position:absolute; inset:0; border-radius:50%; background:rgba(0,0,0,.55);
+    transform-origin:bottom; transform:scaleY(0); pointer-events:none; }
+  #btnRestartMini { position:absolute; right:16px; top:48px; pointer-events:auto;
+    background:rgba(0,0,0,.4); color:#fff; border:1px solid rgba(255,255,255,.5);
+    border-radius:8px; padding:4px 10px; font-size:13px; }
+  #flash { position:fixed; inset:0; background:#ff2020; opacity:0; pointer-events:none;
+    z-index:9; transition:opacity .25s; }
+  #dmgLayer { position:fixed; inset:0; pointer-events:none; z-index:8; }
+  .dmg { position:absolute; font-size:20px; font-weight:800; text-shadow:0 2px 3px #000;
+    animation:floatUp .9s ease-out forwards; }
+  @keyframes floatUp { from { transform:translateY(0); opacity:1; } to { transform:translateY(-46px); opacity:0; } }
+  .overlay { position:fixed; inset:0; z-index:20; display:flex; align-items:center; justify-content:center;
+    flex-direction:column; gap:16px; background:rgba(10,14,30,.82); color:#fff; text-align:center; }
+  .overlay[hidden] { display:none; }
+  #select h1 { font-size:26px; margin:0 0 4px; }
+  #select p { margin:0 0 10px; color:#cfd8ff; font-size:14px; }
+  .cards { display:flex; gap:18px; flex-wrap:wrap; justify-content:center; }
+  .card { width:min(38vw,240px); padding:18px 14px; border-radius:16px; cursor:pointer;
+    background:linear-gradient(160deg,#2b3a6e,#1b2444); border:2px solid rgba(255,255,255,.35); }
+  .card:active { transform:scale(.97); }
+  .card .emoji { font-size:44px; }
+  .card h2 { margin:8px 0 6px; font-size:18px; }
+  .card p { font-size:13px; color:#cfe0ff; }
+  .bigbtn { padding:12px 34px; font-size:18px; border-radius:12px; border:none;
+    background:linear-gradient(90deg,#3ad66b,#2fa3d8); color:#fff; font-weight:700; cursor:pointer; }
+  .overlay h2 { font-size:26px; margin:0; }
+  .overlay p { font-size:15px; color:#dfe6ff; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="touchLayer"></div>
+<div id="joyBase"></div><div id="joyKnob"></div>
+<div id="flash"></div>
+<div id="dmgLayer"></div>
+
+<div id="hud" hidden>
+  <div id="playerHPWrap" class="hpwrap"><div id="playerHPBar" class="hpbar"></div></div>
+  <div id="playerHPLabel">生命 100</div>
+  <div id="monsterWrap">
+    <div id="monsterName">山洞守卫 · 三头兽</div>
+    <div id="monsterHPWrap" class="hpwrap"><div id="monsterHPBar" class="hpbar"></div></div>
+  </div>
+  <div id="crystalBox">💎 0 / 3</div>
+  <div id="hint">向山洞出发！</div>
+  <button id="btnSkill">⚡<br>电击<div id="cdOverlay"></div></button>
+  <button id="btnRestartMini">↻ 重开</button>
+</div>
+
+<div id="select" class="overlay">
+  <h1>🏝️ Alex &amp; Victory：怪物岛探险</h1>
+  <p>海滩 → 山洞 → 击败守卫 → 打开道路。选择你的角色：</p>
+  <div class="cards">
+    <div class="card" id="card-alex">
+      <div class="emoji">⚡</div>
+      <h2>Alex · 电力发明家</h2>
+      <p>电击：射速快、伤害稳定</p>
+    </div>
+    <div class="card" id="card-victory">
+      <div class="emoji">🌀</div>
+      <h2>Victory · 重力魔法师</h2>
+      <p>悬浮石投掷：伤害更高、间隔更长</p>
+    </div>
+  </div>
+  <p style="font-size:12px">iPad：左边拖动摇杆移动，右下按钮放技能。键盘：WASD + J</p>
+</div>
+
+<div id="complete" class="overlay" hidden>
+  <h2>🎉 第一关完成！</h2>
+  <p>守卫被击败，洞口打开，通往雨林的路亮了！<br>本关水晶：<span id="finalCrystals">0</span> / 3</p>
+  <button class="bigbtn" id="btnAgainComplete">重新开始</button>
+  <p style="font-size:12px">雨林、火山、城堡与 100 水晶宝箱将在后续关卡出现</p>
+</div>
+
+<div id="defeat" class="overlay" hidden>
+  <h2>💥 你被守卫击败了</h2>
+  <p>红色预警圈出现时，快跑开躲避！</p>
+  <button class="bigbtn" id="btnAgainDefeat">再试一次</button>
+</div>
+
+<script type="importmap">
+{ "imports": { "three": "./node_modules/three/build/three.module.js" } }
+</script>
+<script type="module" src="./src/game.js"></script>
+</body>
+</html>

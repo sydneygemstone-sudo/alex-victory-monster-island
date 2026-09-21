@@ -1,0 +1,151 @@
+{
+  "lesson_date": "2026-09-21",
+  "attribution_note": "A/B model identities pending provider receipt; retain port-based identity until verified. C identified by local handoff. D by this conversation.",
+  "versions": [
+    {
+      "id": "candidate-a",
+      "label": "Classroom A / port 8177",
+      "entry": "index.html",
+      "files": [
+        {
+          "path": "index.html",
+          "sha256": "32298a8de27e2c6dae872014fa05cfdaa1c12f32be916e9f1a693774842f1f9a",
+          "bytes": 10903
+        },
+        {
+          "path": "game.js",
+          "sha256": "cb533e30ba3b24848067fe8d27c95a59c7a193266e3a548586cb27682212a047",
+          "bytes": 53513
+        },
+        {
+          "path": "vendor/three.min.js",
+          "sha256": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa",
+          "bytes": 669884
+        }
+      ],
+      "custom_text_chars": 59605,
+      "custom_text_token_equivalent": 14901,
+      "zip_sha256": "36a5c9bbc5ddf2f07392b24ba0ebdb57ec67873ba2912f9f1f5048e0266f724e"
+    },
+    {
+      "id": "candidate-b",
+      "label": "Classroom B / port 8890",
+      "entry": "index.html",
+      "files": [
+        {
+          "path": "index.html",
+          "sha256": "664964c54a921cfc89462faa7c0a58582b8977a02ab1dc8254513abf43747bdd",
+          "bytes": 6616
+        },
+        {
+          "path": "src/game.js",
+          "sha256": "2e1fe5f2754021472cb7c62f42518f09ab2d82ed9c54a0b86ccb4f97b3f54f73",
+          "bytes": 22501
+        },
+        {
+          "path": "src/combat.mjs",
+          "sha256": "4e5c2cdf69a63967fabd42e5f3fac18d4ff09ecd7696fd7c87d63402b9545945",
+          "bytes": 1956
+        },
+        {
+          "path": "node_modules/three/build/three.module.js",
+          "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+          "bytes": 603113
+        },
+        {
+          "path": "node_modules/three/build/three.core.js",
+          "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+          "bytes": 1403455
+        },
+        {
+          "path": "node_modules/three/LICENSE",
+          "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+          "bytes": 1081
+        }
+      ],
+      "custom_text_chars": 30131,
+      "custom_text_token_equivalent": 7533,
+      "zip_sha256": "6281077271c51b930ebd44a4d5f338572146c1bb798e43a3242d89a3b9875a60"
+    },
+    {
+      "id": "codex-astra",
+      "label": "Codex Astra / port 8891",
+      "entry": "play.html",
+      "files": [
+        {
+          "path": "play.html",
+          "sha256": "6b04966ea3c79978beafd64a5e85bfd001b84918374f7b4ba5cbd6c6934585c3",
+          "bytes": 4820
+        },
+        {
+          "path": "game.js",
+          "sha256": "3d3991ee0974d41c3ffbef614ad4b32d4b903797bf5c6556e0e8edfe661bb189",
+          "bytes": 33381
+        },
+        {
+          "path": "combat.js",
+          "sha256": "12a40f7085bc2f6070468dd2a4667df73229185542254284a522c6b073ee8fff",
+          "bytes": 6984
+        },
+        {
+          "path": "style.css",
+          "sha256": "49eac3547f128feb33690e5877161cd6a3864dea0863d6cb6c4adbe4140abab0",
+          "bytes": 11557
+        },
+        {
+          "path": "favicon.svg",
+          "sha256": "b4182a73742987720f46709846b6f88134a875fddcc5ba20e1498184216f9d97",
+          "bytes": 177
+        },
+        {
+          "path": "vendor/three.module.js",
+          "sha256": "c8211c69345d2e9949dc7a8ac969380497aa0600a5a8ac6a459c8cd02dd9cb8a",
+          "bytes": 603113
+        },
+        {
+          "path": "vendor/three.core.js",
+          "sha256": "eb077d2417f61d3e6d9264c317cabc4ea35769ed6b0ab533067292a550784c20",
+          "bytes": 1403455
+        },
+        {
+          "path": "vendor/LICENSE",
+          "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+          "bytes": 1081
+        }
+      ],
+      "custom_text_chars": 55481,
+      "custom_text_token_equivalent": 13870,
+      "zip_sha256": "d2371be2580a0eac4beb994b321ff14ce4f2d1beb341d9255bfafe95258459d6"
+    },
+    {
+      "id": "web-6pro",
+      "label": "Web 6Pro / port 8892",
+      "entry": "index.html",
+      "files": [
+        {
+          "path": "index.html",
+          "sha256": "70657fc48c42d4e2e63bc57d934ff9ff5e57b344f2ddcbd4598ae87ac7f4ced6",
+          "bytes": 18446
+        },
+        {
+          "path": "game.js",
+          "sha256": "07274886296783cccc1d2288831a5ff53689c08408c264a708945fa09e426816",
+          "bytes": 42937
+        },
+        {
+          "path": "vendor/three.min.js",
+          "sha256": "170c6789f43217c96b3170f4b42fafe135de7f7cd48497a4218f9757ee1d49fa",
+          "bytes": 669884
+        },
+        {
+          "path": "vendor/THREE-LICENSE.txt",
+          "sha256": "852e0e8699169bf9f6fdc6bda3e682d078dcbc738b5d33e74df594721bff271d",
+          "bytes": 1081
+        }
+      ],
+      "custom_text_chars": 60136,
+      "custom_text_token_equivalent": 15034,
+      "zip_sha256": "dbd38e6b30b5ac1b42ad3fb742ce0092b5694604c5a29e9b9265856420a3ee16"
+    }
+  ]
+}
