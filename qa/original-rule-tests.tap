@@ -1,0 +1,94 @@
+TAP version 13
+# Subtest: applyDamage 不低于 0
+ok 1 - applyDamage 不低于 0
+  ---
+  duration_ms: 4.787458
+  type: 'test'
+  ...
+# Subtest: 守卫：远处不攻击，接近警戒，侵入才追击
+ok 2 - 守卫：远处不攻击，接近警戒，侵入才追击
+  ---
+  duration_ms: 7.923416
+  type: 'test'
+  ...
+# Subtest: 守卫不追出自己的领地
+ok 3 - 守卫不追出自己的领地
+  ---
+  duration_ms: 0.589084
+  type: 'test'
+  ...
+# Subtest: 返回途中玩家再入领地会再次追击
+ok 4 - 返回途中玩家再入领地会再次追击
+  ---
+  duration_ms: 0.266042
+  type: 'test'
+  ...
+# Subtest: 范围攻击判定
+ok 5 - 范围攻击判定
+  ---
+  duration_ms: 0.56425
+  type: 'test'
+  ...
+# Subtest: 技能冷却与辅助瞄准
+ok 6 - 技能冷却与辅助瞄准
+  ---
+  duration_ms: 0.378125
+  type: 'test'
+  ...
+# Subtest: 两名角色技能数值明显不同
+ok 7 - 两名角色技能数值明显不同
+  ---
+  duration_ms: 0.464334
+  type: 'test'
+  ...
+# Subtest: 守卫可被击败（火力充足）
+ok 8 - 守卫可被击败（火力充足）
+  ---
+  duration_ms: 0.357084
+  type: 'test'
+  ...
+# Subtest: guardian stays passive at the boat, warns before engaging
+ok 9 - guardian stays passive at the boat, warns before engaging
+  ---
+  duration_ms: 18.283291
+  type: 'test'
+  ...
+# Subtest: red circle locks its target and allows movement to dodge
+ok 10 - red circle locks its target and allows movement to dodge
+  ---
+  duration_ms: 3.739917
+  type: 'test'
+  ...
+# Subtest: standing in repeated attacks loses and a restart restores state
+ok 11 - standing in repeated attacks loses and a restart restores state
+  ---
+  duration_ms: 5.497833
+  type: 'test'
+  ...
+# Subtest: leaving the territory cancels attacks and returns guardian home
+ok 12 - leaving the territory cancels attacks and returns guardian home
+  ---
+  duration_ms: 1.736708
+  type: 'test'
+  ...
+# Subtest: alex can win by moving and casting, then enter the cave
+ok 13 - alex can win by moving and casting, then enter the cave
+  ---
+  duration_ms: 12.707333
+  type: 'test'
+  ...
+# Subtest: victory can win by moving and casting, then enter the cave
+ok 14 - victory can win by moving and casting, then enter the cave
+  ---
+  duration_ms: 4.560167
+  type: 'test'
+  ...
+1..14
+# tests 14
+# suites 0
+# pass 14
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 806.120583

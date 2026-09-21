@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "method": "Static IDs, translation keys, HTML local references and budget totals; not browser rendering",
+  "domIds": 63,
+  "translationKeys": 85,
+  "budgetAllocation": 100
+}

@@ -1,0 +1,257 @@
+{
+  "generated_at": "2026-09-21T23:23:11.175894+10:00",
+  "custom_text_token_equivalent": 40814,
+  "method": "Unicode characters divided by four; output artifact footprint including reused custom text. Not billed model tokens or total task cost. Vendor, repeated ZIPs, original game bodies, input, reasoning and tool IO excluded.",
+  "illustrative_output_aud": 2.0407,
+  "actual_total_task_cost_aud": null,
+  "transport_base64_characters": 71332,
+  "transport_note": "Additional deployment envelope, not provider-token metering and not included in output footprint.",
+  "originals": [
+    {
+      "id": "candidate-a",
+      "custom_text_token_equivalent": 14901,
+      "actual_cost_aud": null
+    },
+    {
+      "id": "candidate-b",
+      "custom_text_token_equivalent": 7533,
+      "actual_cost_aud": null
+    },
+    {
+      "id": "codex-astra",
+      "custom_text_token_equivalent": 13870,
+      "actual_cost_aud": null
+    },
+    {
+      "id": "web-6pro",
+      "custom_text_token_equivalent": 15034,
+      "actual_cost_aud": null
+    }
+  ],
+  "files": [
+    {
+      "stage": "01",
+      "path": "archive/manifest.json",
+      "bytes": 5034,
+      "unicode_characters": 5034,
+      "sha256": "3d51a7b7622172d619ec91c170b9630b5beaf706a172527cfd51da8ca96937f2"
+    },
+    {
+      "stage": "02",
+      "path": "data/comparison.json",
+      "bytes": 4023,
+      "unicode_characters": 4023,
+      "sha256": "7176d6b12eeda55f1bb75bae12a79cd456300a2cae2adb8c2a7671f56ddb708d"
+    },
+    {
+      "stage": "02",
+      "path": "docs/CLASSROOM_FEEDBACK.md",
+      "bytes": 2600,
+      "unicode_characters": 2570,
+      "sha256": "6c09520318cdde02dd311066e8cb326a1f7ca1393d1a5a6366f7aaf36115c270"
+    },
+    {
+      "stage": "02",
+      "path": "docs/PROVENANCE.md",
+      "bytes": 1802,
+      "unicode_characters": 1802,
+      "sha256": "1d6ae90e076e3c506ed40be4368a372557b2521dc86f6e4b0d83158bb8526ebf"
+    },
+    {
+      "stage": "03",
+      "path": "game/audio.mjs",
+      "bytes": 3467,
+      "unicode_characters": 3467,
+      "sha256": "afb8e9fd66664de56c4df559ad31e8c6b764b3d4cc270c9411cd726aa97c4f25"
+    },
+    {
+      "stage": "03",
+      "path": "game/client.mjs",
+      "bytes": 13734,
+      "unicode_characters": 13724,
+      "sha256": "16eb33babc9b06823d838549abcb9add8c179e8bc4edeb453d34003c90b7bfa8"
+    },
+    {
+      "stage": "03",
+      "path": "game/core.mjs",
+      "bytes": 12827,
+      "unicode_characters": 12825,
+      "sha256": "b466f4b842d15c6cdea87d54bb50df6f2a0e21cbda760988454dc0f24556c57e"
+    },
+    {
+      "stage": "03",
+      "path": "game/game.css",
+      "bytes": 8794,
+      "unicode_characters": 8794,
+      "sha256": "1e777c6c0707d024468dadc06df53ab1970a54dde029e1b29cde6cece08b42ba"
+    },
+    {
+      "stage": "03",
+      "path": "game/i18n.mjs",
+      "bytes": 9759,
+      "unicode_characters": 6423,
+      "sha256": "82c4cb0601def7e9f0a0cfb3a3760b4e604d0a6dac6b267df50245f1cd41f0be"
+    },
+    {
+      "stage": "03",
+      "path": "game/index.html",
+      "bytes": 4445,
+      "unicode_characters": 4414,
+      "sha256": "61c2068c3c2ed41117f8fd3ecd36caf7c5e1cdc2cae4e6296f3d534ce7d97f78"
+    },
+    {
+      "stage": "03",
+      "path": "game/view.mjs",
+      "bytes": 22072,
+      "unicode_characters": 22072,
+      "sha256": "be1898f0ae19791f6dfa918c6438942055bd3a7bc205899ba244dab729a712d2"
+    },
+    {
+      "stage": "04",
+      "path": "package.json",
+      "bytes": 187,
+      "unicode_characters": 187,
+      "sha256": "bf4f36c21b9cad4be828cf81fc2630ebd7880135e4c154a66fa373f5a26c0d74"
+    },
+    {
+      "stage": "04",
+      "path": "server.mjs",
+      "bytes": 7452,
+      "unicode_characters": 7450,
+      "sha256": "c9aff334b12725464176943123d3b58267813a200606f6ecc58e70db0c9491d1"
+    },
+    {
+      "stage": "04",
+      "path": "start.cmd",
+      "bytes": 46,
+      "unicode_characters": 46,
+      "sha256": "a03e3dc2c61cbfe81d8c0faecd1df8383f90fe42488b9e214ad41a743cce0146"
+    },
+    {
+      "stage": "04",
+      "path": "start.command",
+      "bytes": 115,
+      "unicode_characters": 115,
+      "sha256": "2187ee0d39dffc3d6bd5e731fbd103b70f1e852f1ffac4672cac2acd5661b594"
+    },
+    {
+      "stage": "05",
+      "path": "assets/icon.svg",
+      "bytes": 338,
+      "unicode_characters": 338,
+      "sha256": "2da39477b4f841aa9959d1aa718098b68730ae8e220729377df291189dbc6d9a"
+    },
+    {
+      "stage": "05",
+      "path": "comparison.html",
+      "bytes": 785,
+      "unicode_characters": 764,
+      "sha256": "ab83fe89556756ea33d6e3b650caccc8422955ca457b323e03c668d78f025d52"
+    },
+    {
+      "stage": "05",
+      "path": "development.html",
+      "bytes": 785,
+      "unicode_characters": 764,
+      "sha256": "ab83fe89556756ea33d6e3b650caccc8422955ca457b323e03c668d78f025d52"
+    },
+    {
+      "stage": "05",
+      "path": "index.html",
+      "bytes": 785,
+      "unicode_characters": 764,
+      "sha256": "ab83fe89556756ea33d6e3b650caccc8422955ca457b323e03c668d78f025d52"
+    },
+    {
+      "stage": "05",
+      "path": "parents.html",
+      "bytes": 785,
+      "unicode_characters": 764,
+      "sha256": "ab83fe89556756ea33d6e3b650caccc8422955ca457b323e03c668d78f025d52"
+    },
+    {
+      "stage": "05",
+      "path": "review.html",
+      "bytes": 785,
+      "unicode_characters": 764,
+      "sha256": "ab83fe89556756ea33d6e3b650caccc8422955ca457b323e03c668d78f025d52"
+    },
+    {
+      "stage": "05",
+      "path": "site.css",
+      "bytes": 7610,
+      "unicode_characters": 7610,
+      "sha256": "33438282dab0bd3b33d02ae32946c5ad25e18b4baa1604f326919fdc0e1e0d57"
+    },
+    {
+      "stage": "05",
+      "path": "site.mjs",
+      "bytes": 42204,
+      "unicode_characters": 29146,
+      "sha256": "9474c7a98871529af0319ce531182d9c9282c9b32e1b0679b1338907e1d0870b"
+    },
+    {
+      "stage": "06",
+      "path": "README.md",
+      "bytes": 1800,
+      "unicode_characters": 1788,
+      "sha256": "6f7d049ab32e55322f34496c9523be500963008201bbc9c04da862d6bddd88f9"
+    },
+    {
+      "stage": "06",
+      "path": "docs/ACCEPTANCE.md",
+      "bytes": 1297,
+      "unicode_characters": 1295,
+      "sha256": "3b9f54b916e40dff71b55f52fcd80fce567e2533f52c1488255ad1242f6ee32f"
+    },
+    {
+      "stage": "06",
+      "path": "docs/BUDGET.md",
+      "bytes": 1364,
+      "unicode_characters": 1364,
+      "sha256": "b36c739c2cb2517ed43ca4ba3d121559cc95f1258bdc63a05fabe8e30c76eb72"
+    },
+    {
+      "stage": "06",
+      "path": "docs/SPEC-2.0.md",
+      "bytes": 3880,
+      "unicode_characters": 3876,
+      "sha256": "9e7dc597cf2f25bfbd07c97e59b14c93b343dd3a387dadafc1f5a905674376ad"
+    },
+    {
+      "stage": "06",
+      "path": "qa/core.test.mjs",
+      "bytes": 6547,
+      "unicode_characters": 6547,
+      "sha256": "0851e6aa4088b27ae7fe555a06220d37dd8cf2c7ec306ccde3a6fdfd4add9934"
+    },
+    {
+      "stage": "06",
+      "path": "qa/network.test.mjs",
+      "bytes": 3095,
+      "unicode_characters": 3095,
+      "sha256": "fb2fe1a3adb6b616d3a835578ddac82c127a90dd00551c70eea8807bb70c4c36"
+    },
+    {
+      "stage": "06",
+      "path": "qa/package-delivery.py",
+      "bytes": 8035,
+      "unicode_characters": 7636,
+      "sha256": "6a9d401dfb440fc4d85f5c6017d64a3eadd98b498847abad9b47e7291e5c3887"
+    },
+    {
+      "stage": "06",
+      "path": "qa/scene-check.mjs",
+      "bytes": 2185,
+      "unicode_characters": 2185,
+      "sha256": "9ba897143e6b9527fbf96f861c7cb36bed32841e758a1d889f8cdc005f233f35"
+    },
+    {
+      "stage": "06",
+      "path": "qa/static-check.mjs",
+      "bytes": 1611,
+      "unicode_characters": 1611,
+      "sha256": "2a19b6b39ec96592ed9391ad6e3423a259f0d8a8705e1184a259c6ece91f2acb"
+    }
+  ]
+}

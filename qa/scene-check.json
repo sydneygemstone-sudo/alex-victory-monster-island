@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "method": "CPU-only real Three.js geometry and finite world transforms; WebGLRenderer stubbed, no pixel, performance, audio or touch claim",
+  "updates": 368,
+  "sceneObjects": 219
+}

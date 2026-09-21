@@ -1,0 +1,116 @@
+{
+  "lesson_date": "2026-09-21",
+  "status": "provisional",
+  "scope": "One classroom task. Ratings reflect teacher/student observations plus inspected source, not a universal model benchmark.",
+  "weights": {
+    "reliability": 30,
+    "controls": 20,
+    "combat": 20,
+    "art": 20,
+    "engineering": 10
+  },
+  "grades": [
+    {
+      "label": "GLM 5.3 Flash Low",
+      "source_id": null,
+      "attribution": "teacher label; provider receipt unavailable",
+      "scores": [
+        4,
+        4,
+        2,
+        2,
+        3
+      ],
+      "evidence": "Dean: stable in brief play; fun ground-rock pickup; weak art; no ranged pressure. Matching candidate A is plausible, not verified.",
+      "weighted_5": 3.1
+    },
+    {
+      "label": "Opus",
+      "source_id": null,
+      "attribution": "teacher label; exact model revision and file identity unavailable",
+      "scores": [
+        4,
+        3,
+        2,
+        2,
+        2
+      ],
+      "evidence": "Dean: no bug seen in brief play; simple combat and limited art. Candidate B association is not verified.",
+      "weighted_5": 2.8
+    },
+    {
+      "label": "Codex Astra",
+      "source_id": "codex-astra",
+      "attribution": "classroom label and matching handoff; provider token receipt unavailable",
+      "scores": [
+        1,
+        2,
+        3,
+        3,
+        4
+      ],
+      "evidence": "Dean/Alex: strong on-time prototype; severe touch zoom and small dash target. Separate combat module inspected; 6 pure-rule tests rerun passed.",
+      "weighted_5": 2.3
+    },
+    {
+      "label": "Web 6Pro",
+      "source_id": "web-6pro",
+      "attribution": "this conversation and known delivered source",
+      "scores": [
+        2,
+        3,
+        4,
+        4,
+        2
+      ],
+      "evidence": "Dean: strongest art and richest skills, rendering glitch. Coplanar grass/sand geometry found; exact device fault not reproduced.",
+      "weighted_5": 3.0
+    }
+  ],
+  "verified_entries": [
+    {
+      "id": "candidate-a",
+      "port": 8177,
+      "entry": "originals/candidate-a/index.html",
+      "features": "13 persistent ground stones; two-stage gravity; one slam; 400 boss HP; return at 31m",
+      "model_verified": false,
+      "new_browser_test": false,
+      "inspection": "source/config/readme inspected; old QA report available"
+    },
+    {
+      "id": "candidate-b",
+      "port": 8890,
+      "entry": "originals/candidate-b/index.html",
+      "features": "simpler 3D; skill button; src/combat.mjs; reward 3 crystals",
+      "model_verified": false,
+      "new_browser_test": false,
+      "new_pure_tests": 8
+    },
+    {
+      "id": "codex-astra",
+      "port": 8891,
+      "entry": "originals/codex-astra/play.html",
+      "features": "separate combat.js; dash; reward 8 crystals",
+      "model_verified": true,
+      "new_browser_test": false,
+      "new_pure_tests": 6
+    },
+    {
+      "id": "web-6pro",
+      "port": 8892,
+      "entry": "originals/web-6pro/index.html",
+      "features": "richer procedural art; two skills per hero; reward 10 crystals",
+      "model_verified": true,
+      "new_browser_test": false,
+      "inspection": "source and prior delivered QA inspected"
+    }
+  ],
+  "new_original_tests": {
+    "pure_logic_passed": 14,
+    "browser_rerun": "blocked by tooling; not completed",
+    "physical_ipad": "not performed"
+  },
+  "base_decision": "Reuse Web 6Pro procedural art. Rebuild shared deterministic combat/server core. Preserve ground-stone affordance seen in candidate A; do not claim copying external repositories.",
+  "repo_reuse_finding": "Only Three.js dependency is evidenced by inspected files. No verified git-clone/import evidence of an external finished game. No conclusion can be drawn about model training or unseen provenance.",
+  "prompt_finding": "Clear classroom brief specified camera, device, characters, monster trigger, route, win/loss and scope. This plausibly reduced ambiguity. No controlled prompt ablation was run, so it does not prove the cause of GLM quality."
+}

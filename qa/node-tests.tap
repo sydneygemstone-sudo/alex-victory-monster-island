@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: save validation rejects NaN, infinity, negatives and excessive upgrades
+ok 1 - save validation rejects NaN, infinity, negatives and excessive upgrades
+  ---
+  duration_ms: 13.7825
+  type: 'test'
+  ...
+# Subtest: distant player is safe and approaching starts only within territory
+ok 2 - distant player is safe and approaching starts only within territory
+  ---
+  duration_ms: 17.324709
+  type: 'test'
+  ...
+# Subtest: committed battle does not reset by running back to shore
+ok 3 - committed battle does not reset by running back to shore
+  ---
+  duration_ms: 1.438666
+  type: 'test'
+  ...
+# Subtest: two-player boss HP is exactly twice single at each round
+ok 4 - two-player boss HP is exactly twice single at each round
+  ---
+  duration_ms: 2.130958
+  type: 'test'
+  ...
+# Subtest: two-stage gravity uses a persistent environmental stone
+ok 5 - two-stage gravity uses a persistent environmental stone
+  ---
+  duration_ms: 15.600875
+  type: 'test'
+  ...
+# Subtest: a rock is atomically reserved and cannot be picked up by two players
+ok 6 - a rock is atomically reserved and cannot be picked up by two players
+  ---
+  duration_ms: 0.415125
+  type: 'test'
+  ...
+# Subtest: telegraphed attack does not apply early damage, then hits
+ok 7 - telegraphed attack does not apply early damage, then hits
+  ---
+  duration_ms: 0.77075
+  type: 'test'
+  ...
+# Subtest: boss cycles through four attack families including ranged projectiles
+ok 8 - boss cycles through four attack families including ranged projectiles
+  ---
+  duration_ms: 0.386417
+  type: 'test'
+  ...
+# Subtest: heavy ability is gated, reduces damage and blocks knockback
+ok 9 - heavy ability is gated, reduces damage and blocks knockback
+  ---
+  duration_ms: 2.479916
+  type: 'test'
+  ...
+# Subtest: dash has real invulnerability and cooldown
+ok 10 - dash has real invulnerability and cooldown
+  ---
+  duration_ms: 5.415
+  type: 'test'
+  ...
+# Subtest: gravity interrupts windup and cannot go negative
+ok 11 - gravity interrupts windup and cannot go negative
+  ---
+  duration_ms: 0.959791
+  type: 'test'
+  ...
+# Subtest: reward, purchase and growth loop applies exactly once
+ok 12 - reward, purchase and growth loop applies exactly once
+  ---
+  duration_ms: 0.91425
+  type: 'test'
+  ...
+# Subtest: invalid input cannot teleport, set HP, exceed speed, or poison state
+ok 13 - invalid input cannot teleport, set HP, exceed speed, or poison state
+  ---
+  duration_ms: 0.2885
+  type: 'test'
+  ...
+# Subtest: pause freezes state, flushes input and requires both clients connected
+ok 14 - pause freezes state, flushes input and requires both clients connected
+  ---
+  duration_ms: 2.15825
+  type: 'test'
+  ...
+# Subtest: all-player defeat ends battle, single downed partner does not
+ok 15 - all-player defeat ends battle, single downed partner does not
+  ---
+  duration_ms: 0.251375
+  type: 'test'
+  ...
+# Subtest: swept collision catches fast projectile crossing a target
+ok 16 - swept collision catches fast projectile crossing a target
+  ---
+  duration_ms: 0.121375
+  type: 'test'
+  ...
+# Subtest: every game translation key has three nonempty language values
+ok 17 - every game translation key has three nonempty language values
+  ---
+  duration_ms: 2.989917
+  type: 'test'
+  ...
+# Subtest: alex completes a rules-driven fight and claims the chest without damage shortcuts
+ok 18 - alex completes a rules-driven fight and claims the chest without damage shortcuts
+  ---
+  duration_ms: 23.17775
+  type: 'test'
+  ...
+# Subtest: victory completes a rules-driven fight and claims the chest without damage shortcuts
+ok 19 - victory completes a rules-driven fight and claims the chest without damage shortcuts
+  ---
+  duration_ms: 36.479542
+  type: 'test'
+  ...
+# Subtest: two independent HTTP/SSE clients share a server-authoritative co-op run
+ok 20 - two independent HTTP/SSE clients share a server-authoritative co-op run
+  ---
+  duration_ms: 947.320041
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1663.261792

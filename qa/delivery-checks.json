@@ -1,0 +1,99 @@
+{
+  "checked_at": "2026-09-21T23:23:11.175894+10:00",
+  "release": "2.0.0-family-beta",
+  "new_rules_network": {
+    "passed": 20,
+    "failed": 0
+  },
+  "original_pure_rules": {
+    "candidate_b_passed": 8,
+    "codex_astra_passed": 6
+  },
+  "syntax": [
+    {
+      "file": "game/audio.mjs",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "game/i18n.mjs",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "game/view.mjs",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "game/client.mjs",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "game/core.mjs",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "originals/web-6pro/game.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "originals/candidate-b/src/game.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "originals/candidate-b/src/combat.mjs",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "originals/candidate-a/game.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "originals/codex-astra/combat.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "originals/codex-astra/game.js",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "site.mjs",
+      "passed": true,
+      "error": ""
+    },
+    {
+      "file": "server.mjs",
+      "passed": true,
+      "error": ""
+    }
+  ],
+  "scene": {
+    "passed": true,
+    "method": "CPU-only real Three.js geometry and finite world transforms; WebGLRenderer stubbed, no pixel, performance, audio or touch claim",
+    "updates": 368,
+    "sceneObjects": 219
+  },
+  "static": {
+    "passed": true,
+    "method": "Static IDs, translation keys, HTML local references and budget totals; not browser rendering",
+    "domIds": 63,
+    "translationKeys": 85,
+    "budgetAllocation": 100
+  },
+  "not_verified": [
+    "Four-original browser replay blocked by available tool",
+    "Physical iPad/Safari visual, audio, touch and performance",
+    "Two physical iPads on Wi-Fi",
+    "Exact provider model attribution for A/B",
+    "Actual input/output/reasoning token bills and total AUD-equivalent spend"
+  ]
+}

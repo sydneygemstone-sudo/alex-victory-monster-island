@@ -1,0 +1,146 @@
+{
+  "currency": "AUD",
+  "budget_cap": 100,
+  "basis": "Internal stage envelopes, not provider invoices. The 100 AUD total is a planning ceiling; actual model-token spend is not measurable from this session.",
+  "provider_tokens": null,
+  "actual_api_cost_aud": null,
+  "paid_external_assets_purchased": 0,
+  "classroom_accounting_output_rate_aud_per_million": 50,
+  "rate_note": "Explicit internal comparison unit, not a current vendor price. Applies only to delivered custom-text footprint; excludes input, hidden reasoning, tool replies, retries and caches. Not total task cost.",
+  "entries": [
+    {
+      "id": "01",
+      "stage": "Freeze & provenance",
+      "reserved_aud": 12,
+      "status": "complete",
+      "description": "Four entry points frozen with original hashes. Model A/B identity remains unresolved.",
+      "evidence": [
+        "archive/manifest.json"
+      ],
+      "actual_input_tokens": null,
+      "actual_output_tokens": null,
+      "actual_cost_aud": null,
+      "delivered_characters": 5034,
+      "delivered_text_equivalent": 1258,
+      "illustrative_output_aud": 0.0629,
+      "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
+      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+    },
+    {
+      "id": "02",
+      "stage": "Comparison & lesson synthesis",
+      "reserved_aud": 13,
+      "status": "partial",
+      "description": "Teacher/student feedback and source reviewed; 14 original pure-rule tests passed. Four-version browser rerun blocked.",
+      "evidence": [
+        "data/comparison.json",
+        "docs/CLASSROOM_FEEDBACK.md"
+      ],
+      "actual_input_tokens": null,
+      "actual_output_tokens": null,
+      "actual_cost_aud": null,
+      "delivered_characters": 8395,
+      "delivered_text_equivalent": 2099,
+      "illustrative_output_aud": 0.1049,
+      "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
+      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+    },
+    {
+      "id": "03",
+      "stage": "Game, visuals & original audio",
+      "reserved_aud": 30,
+      "status": "implemented_beta",
+      "description": "Web 6Pro scene reused; shared new combat, 13 stones, four attacks, intro, reward/shop, anchor, save and three languages.",
+      "evidence": [
+        "game/core.mjs",
+        "game/view.mjs",
+        "game/audio.mjs"
+      ],
+      "actual_input_tokens": null,
+      "actual_output_tokens": null,
+      "actual_cost_aud": null,
+      "delivered_characters": 71719,
+      "delivered_text_equivalent": 17930,
+      "illustrative_output_aud": 0.8965,
+      "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
+      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+    },
+    {
+      "id": "04",
+      "stage": "Two-player LAN",
+      "reserved_aud": 15,
+      "status": "tests_passed",
+      "description": "Server-authoritative two-player rooms. 2x HP, per-player targeting, reconnect pause, sequence deduplication.",
+      "evidence": [
+        "server.mjs",
+        "qa/network.test.mjs"
+      ],
+      "actual_input_tokens": null,
+      "actual_output_tokens": null,
+      "actual_cost_aud": null,
+      "delivered_characters": 7798,
+      "delivered_text_equivalent": 1950,
+      "illustrative_output_aud": 0.0975,
+      "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
+      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+    },
+    {
+      "id": "05",
+      "stage": "Trilingual hub & parent report",
+      "reserved_aud": 15,
+      "status": "implemented",
+      "description": "Newest build first, originals, rubric, budget, development log, private local review export.",
+      "evidence": [
+        "index.html",
+        "parents.html",
+        "comparison.html",
+        "development.html",
+        "review.html"
+      ],
+      "actual_input_tokens": null,
+      "actual_output_tokens": null,
+      "actual_cost_aud": null,
+      "delivered_characters": 40914,
+      "delivered_text_equivalent": 10228,
+      "illustrative_output_aud": 0.5114,
+      "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
+      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+    },
+    {
+      "id": "06",
+      "stage": "Acceptance & publishing",
+      "reserved_aud": 10,
+      "status": "partial",
+      "description": "20 new and 14 original pure-rule checks, all custom-source syntax, real Three.js CPU scene and static DOM references passed. Browser/device acceptance remains outstanding.",
+      "evidence": [
+        "qa/node-tests.tap",
+        "docs/ACCEPTANCE.md"
+      ],
+      "actual_input_tokens": null,
+      "actual_output_tokens": null,
+      "actual_cost_aud": null,
+      "delivered_characters": 29397,
+      "delivered_text_equivalent": 7349,
+      "illustrative_output_aud": 0.3675,
+      "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
+      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+    },
+    {
+      "id": "07",
+      "stage": "Uncommitted contingency",
+      "reserved_aud": 5,
+      "status": "reserve",
+      "description": "Held for device-specific defects. Not an amount already spent.",
+      "evidence": [],
+      "actual_input_tokens": null,
+      "actual_output_tokens": null,
+      "actual_cost_aud": null,
+      "delivered_characters": 0,
+      "delivered_text_equivalent": 0,
+      "illustrative_output_aud": 0.0,
+      "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
+      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+    }
+  ],
+  "history_note": "All four historical provider bills remain unknown. Historical source footprints are in archive/manifest.json. Unknown is not zero."
+}
