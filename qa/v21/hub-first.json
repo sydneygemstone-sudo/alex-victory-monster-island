@@ -1,0 +1,102 @@
+{
+  "checks": [
+    {
+      "page": "index.html",
+      "missingImages": [],
+      "overflow": false
+    },
+    {
+      "page": "index.html",
+      "language": "zh-Hant",
+      "h1": "怪物島\n潮汐迴響",
+      "overflow": false
+    },
+    {
+      "page": "index.html",
+      "language": "en",
+      "h1": "An island.\nTwo extraordinary powers.",
+      "overflow": false
+    },
+    {
+      "page": "index.html",
+      "language": "zh-Hans",
+      "h1": "怪物岛\n潮汐回响",
+      "overflow": false
+    },
+    {
+      "page": "index.html",
+      "mobileOverflow": false
+    },
+    {
+      "page": "comparison.html",
+      "missingImages": [],
+      "overflow": false
+    },
+    {
+      "page": "comparison.html",
+      "language": "zh-Hant",
+      "h1": "好的 MVP，\n和穩健的產品，不是一張分數表。",
+      "overflow": false
+    },
+    {
+      "page": "comparison.html",
+      "language": "en",
+      "h1": "A compelling MVP and a robust product\nare not the same score.",
+      "overflow": false
+    },
+    {
+      "page": "comparison.html",
+      "language": "zh-Hans",
+      "h1": "好的 MVP，\n和稳健的产品，不是一张分数表。",
+      "overflow": false
+    },
+    {
+      "page": "costs.html",
+      "missingImages": [],
+      "overflow": false
+    },
+    {
+      "page": "costs.html",
+      "language": "zh-Hant",
+      "h1": "A$100 預算，\n每一筆從回執算起。",
+      "overflow": false
+    },
+    {
+      "page": "costs.html",
+      "language": "en",
+      "h1": "An A$100 budget.\nEvery measured dollar traced to usage.",
+      "overflow": false
+    },
+    {
+      "page": "costs.html",
+      "language": "zh-Hans",
+      "h1": "A$100 预算，\n每一笔从回执算起。",
+      "overflow": false
+    },
+    {
+      "page": "cinematic.html",
+      "missingImages": [],
+      "overflow": false
+    },
+    {
+      "page": "cinematic.html",
+      "language": "zh-Hant",
+      "h1": "先讓你看懂危險，\n再把控制權交給你。",
+      "overflow": false
+    },
+    {
+      "page": "cinematic.html",
+      "language": "en",
+      "h1": "Understand the danger.\nThen take control.",
+      "overflow": false
+    },
+    {
+      "page": "cinematic.html",
+      "language": "zh-Hans",
+      "h1": "先让你看懂危险，\n再把控制权交给你。",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

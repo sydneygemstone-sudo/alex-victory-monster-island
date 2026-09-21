@@ -1,0 +1,98 @@
+{
+  "checks": [
+    {
+      "page": "parents.html",
+      "missingImages": [],
+      "overflow": false
+    },
+    {
+      "page": "parents.html",
+      "language": "zh-Hant",
+      "h1": "他們沒有逐行寫程式。\n但他們在真正地創作。",
+      "overflow": false
+    },
+    {
+      "page": "parents.html",
+      "language": "en",
+      "h1": "They did not type every line.\nThey still made the creative decisions.",
+      "overflow": false
+    },
+    {
+      "page": "parents.html",
+      "language": "zh-Hans",
+      "h1": "他们没有逐行写代码。\n但他们在真正地创造。",
+      "overflow": false
+    },
+    {
+      "page": "development.html",
+      "missingImages": [],
+      "overflow": false
+    },
+    {
+      "page": "development.html",
+      "language": "zh-Hant",
+      "h1": "每一條回饋，\n都應該在遊戲裡留下變化。",
+      "overflow": false
+    },
+    {
+      "page": "development.html",
+      "language": "en",
+      "h1": "Every piece of feedback\nshould change something you can see.",
+      "overflow": false
+    },
+    {
+      "page": "development.html",
+      "language": "zh-Hans",
+      "h1": "每一条反馈，\n都应该在游戏里留下变化。",
+      "overflow": false
+    },
+    {
+      "page": "review.html",
+      "missingImages": [],
+      "overflow": false
+    },
+    {
+      "page": "review.html",
+      "language": "zh-Hant",
+      "h1": "不要只說「好玩」。\n告訴我們，哪裡變好了。",
+      "overflow": false
+    },
+    {
+      "page": "review.html",
+      "language": "en",
+      "h1": "Not just “it is fun.”\nTell us what improved.",
+      "overflow": false
+    },
+    {
+      "page": "review.html",
+      "language": "zh-Hans",
+      "h1": "不要只说“好玩”。\n告诉我们，哪里变好了。",
+      "overflow": false
+    },
+    {
+      "page": "play-guide.html",
+      "missingImages": [],
+      "overflow": false
+    },
+    {
+      "page": "play-guide.html",
+      "language": "zh-Hant",
+      "h1": "一個人，直接開啟。\n兩個人，同一張海島地圖。",
+      "overflow": false
+    },
+    {
+      "page": "play-guide.html",
+      "language": "en",
+      "h1": "Solo: open the page.\nCo-op: share the island.",
+      "overflow": false
+    },
+    {
+      "page": "play-guide.html",
+      "language": "zh-Hans",
+      "h1": "一个人，直接打开。\n两个人，同一张海岛地图。",
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

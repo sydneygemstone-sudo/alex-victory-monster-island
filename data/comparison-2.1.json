@@ -1,0 +1,187 @@
+{
+  "rubric": {
+    "scale": 10,
+    "weights": {
+      "art": 0.4,
+      "feel": 0.3,
+      "loop": 0.2,
+      "clarity": 0.1
+    },
+    "note": "MVP appeal = visual presentation 40%, interaction feel 30%, playable loop 20%, clarity 10%. Delivery timing is shown independently because comparable build timestamps are incomplete. Scores are reviewer judgments of these artifacts, not benchmark measurements or student grades. Critical device bugs remain release blockers regardless of MVP score."
+  },
+  "models": [
+    {
+      "key": "web",
+      "name": "ChatGPT-6-Pro",
+      "id": "chatgpt-6-pro",
+      "environment": "ChatGPT web / Astra",
+      "effort": "Web UI · not exposed",
+      "entry": "originals/web-6pro/index.html",
+      "image": "assets/original-web.jpg",
+      "scores": {
+        "art": 9.4,
+        "feel": 8.2,
+        "loop": 8.1,
+        "clarity": 7.5
+      },
+      "deadline": [
+        "未在 15 分钟内完成全部交付",
+        "未在 15 分鐘內完成全部交付",
+        "Full delivery exceeded 15 minutes"
+      ],
+      "strength": [
+        "完整色彩、灯光、场景层次与三头兽轮廓；两套角色能力更丰富。",
+        "完整色彩、燈光、場景層次與三頭獸輪廓；兩套角色能力更豐富。",
+        "Cohesive colour, lighting, scene depth and guardian silhouette; richer character abilities."
+      ],
+      "deduction": [
+        "画面 glitch 和几乎不可见的电攻击影响反馈；美术高分不抵消真机故障。",
+        "畫面 glitch 和幾乎不可見的電攻擊影響回饋；美術高分不抵消真機故障。",
+        "Reported visual glitches and barely visible electric attacks weaken feedback. Art quality does not waive device defects."
+      ],
+      "engineering": [
+        "原版有浏览器回归；没有实体 iPad 证明。2.1 保留美术，替换投射物与演出。",
+        "原版有瀏覽器回歸；沒有實體 iPad 證明。2.1 保留美術，替換投射物與演出。",
+        "Original browser regressions exist, not physical-iPad proof. 2.1 retains the art and rebuilds projectiles/cinematics."
+      ],
+      "mvp_score": 8.59
+    },
+    {
+      "key": "astra",
+      "name": "GPT-6 Astra",
+      "id": "gpt-6-astra",
+      "environment": "Codex CLI 0.155.1",
+      "effort": "max",
+      "entry": "playable/gpt-6-astra/play.html",
+      "image": "assets/original-astra.jpg",
+      "scores": {
+        "art": 8.8,
+        "feel": 7.8,
+        "loop": 8.0,
+        "clarity": 6.8
+      },
+      "deadline": [
+        "Dean 确认按时提供课堂可玩版本",
+        "Dean 確認按時提供課堂可玩版本",
+        "Dean confirms an on-time classroom playable MVP"
+      ],
+      "strength": [
+        "视觉与关卡呈现明显领先 GLM / Opus；孩子及时获得了可测的玩法与手感。",
+        "視覺與關卡呈現明顯領先 GLM / Opus；孩子及時獲得了可測的玩法與手感。",
+        "Visual/level presentation clearly exceeds GLM and Opus here; children received a playable idea on time."
+      ],
+      "deduction": [
+        "Alex 发现 Safari 缩放和冲刺触控故障，直接破坏操作；稳定性不能打成优秀。",
+        "Alex 發現 Safari 縮放和衝刺觸控故障，直接破壞操作；穩定性不能打成優秀。",
+        "Alex reported Safari zoom and dash-touch failures that break control. Reliability must not be rated excellent."
+      ],
+      "engineering": [
+        "不是“没测试”：实际有 6 项规则测试和 4 组浏览器场景。缺口是测试覆盖和真机，不是测试文件数量。",
+        "不是「沒測試」：實際有 6 項規則測試和 4 組瀏覽器情境。缺口是測試覆蓋和真機，不是測試檔案數量。",
+        "Not ‘untested’: six rule tests and four browser scenarios were recorded. The gap is coverage and physical devices, not file count."
+      ],
+      "mvp_score": 8.14
+    },
+    {
+      "key": "opus",
+      "name": "Claude Opus 5",
+      "id": "claude-opus-5",
+      "environment": "Claude Code 2.1.278",
+      "effort": "xhigh",
+      "entry": "originals/candidate-a/index.html",
+      "image": "assets/original-opus.jpg",
+      "scores": {
+        "art": 4.5,
+        "feel": 6.4,
+        "loop": 7.6,
+        "clarity": 7.8
+      },
+      "deadline": [
+        "完整验收约 24 分钟；首个可玩时点未独立计时",
+        "完整驗收約 24 分鐘；首個可玩時點未獨立計時",
+        "Full verification ~24 minutes; first-playable time not independently timed"
+      ],
+      "strength": [
+        "两段式抓石—投掷和可复用场景石头有明确交互价值；领地规则与回归证据较完整。",
+        "兩段式抓石—投擲和可重用場景石頭有明確互動價值；領地規則與回歸證據較完整。",
+        "Two-stage lift/throw and reusable scene rocks add interaction value; territorial rules and regression evidence are explicit."
+      ],
+      "deduction": [
+        "美术、技能种类和战斗压迫感不足。能跑通与测试多，不该被折算成高美术分。",
+        "美術、技能種類和戰鬥壓迫感不足。能跑通與測試多，不該被折算成高美術分。",
+        "Art, move variety and combat pressure are limited. Passing tests must not inflate the art score."
+      ],
+      "engineering": [
+        "会话证据确认它是原 8177 版本；复制的是 Michael 工程里的 Three.js 引擎文件，未发现整套游戏仓库复制证据。",
+        "會話證據確認它是原 8177 版本；複製的是 Michael 工程裡的 Three.js 引擎檔案，未發現整套遊戲倉庫複製證據。",
+        "Session evidence maps it to the former 8177 build. A Three.js engine file was reused from Michael’s project; no full-game repository copy is established."
+      ],
+      "mvp_score": 6.02
+    },
+    {
+      "key": "glm",
+      "name": "GLM-5.3-Flash",
+      "id": "glm-5.3-flash",
+      "environment": "Codex CLI 0.155.1 / codex_glm",
+      "effort": "low",
+      "entry": "originals/candidate-b/index.html",
+      "image": "assets/original-glm.jpg",
+      "scores": {
+        "art": 3.6,
+        "feel": 5.8,
+        "loop": 6.8,
+        "clarity": 7.0
+      },
+      "deadline": [
+        "会话约 28 分钟；首个可玩时点未独立计时",
+        "會話約 28 分鐘；首個可玩時點未獨立計時",
+        "Session ~28 minutes; first-playable time not independently timed"
+      ],
+      "strength": [
+        "低思考档位下交付简单的三维寻宝循环；实际计量对应的 API 等值成本最低。",
+        "低思考檔位下交付簡單的三維尋寶循環；實際計量對應的 API 等值成本最低。",
+        "A simple 3D treasure loop at low effort, with the lowest API-equivalent cost in the metered set."
+      ],
+      "deduction": [
+        "形体、材质和环境细节明显落后；单一攻击及轻易脱战降低挑战，不因为便宜就补美术分。",
+        "形體、材質和環境細節明顯落後；單一攻擊及輕易脫戰降低挑戰，不因為便宜就補美術分。",
+        "Geometry, materials and environmental detail lag clearly. One attack and easy disengagement reduce challenge. Low price does not earn art points."
+      ],
+      "engineering": [
+        "会话确认原 8890 是 glm-5.3-flash / low，而非 Opus。明确 Brief 有助于收敛任务，但本次不能证明它单独造成质量提升。",
+        "會話確認原 8890 是 glm-5.3-flash / low，而非 Opus。明確 Brief 有助於收斂任務，但本次不能證明它單獨造成品質提升。",
+        "The former 8890 entry is glm-5.3-flash / low, not Opus. A precise brief plausibly helps, but this run does not isolate its causal effect."
+      ],
+      "mvp_score": 5.24
+    }
+  ],
+  "benchmarks": [
+    {
+      "name": "Terminal-Bench 4.0",
+      "unit": "%",
+      "astra": 57.9,
+      "opus": 52.6
+    },
+    {
+      "name": "DeepSWE v1.1",
+      "unit": "%",
+      "astra": 74.1,
+      "opus": 73.7
+    },
+    {
+      "name": "Artificial Analysis Coding Agent Index v1.4",
+      "unit": "score",
+      "astra": 67.0,
+      "opus": 68.1
+    }
+  ],
+  "benchmark_source": "https://openai.com/index/gpt-6-astra/",
+  "benchmark_note": "All three pairwise comparisons are reported in OpenAI's launch table, not independently rerun here. Publisher reports best reasoning settings; ChatGPT/CLI results may vary. None directly measures game art, deadline utility or iPad touch quality.",
+  "glm_benchmark": {
+    "DeepSWE": 63.4,
+    "Terminal-Bench 2.1": 84.3,
+    "source": "https://huggingface.co/zai-org/GLM-5.3-Flash",
+    "note": "Separate suite/version and maximum-effort model-card setting. Do not overlay Terminal-Bench 2.1 on 4.0; classroom GLM used low. No valid same-setting four-way rank."
+  },
+  "compatibility_note": "Codex Astra playable mirror changes only root-relative HTML asset URLs; original game.js and combat.js byte-identical. Immutable originals remain in originals/."
+}

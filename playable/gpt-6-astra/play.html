@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#183e40">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Alex & Victory · 怪物岛探险</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <canvas id="world" aria-label="怪物岛第三人称3D游戏场景"></canvas>
+  <div id="vignette"></div>
+  <main id="menu" class="screen">
+    <div class="menu-copy">
+      <div class="eyebrow"><span class="little-star">✦</span> ALEX & VICTORY <span class="edition">冒险第一章</span></div>
+      <h1>MONSTER<br><span>ISLAND</span><em>怪物岛探险</em></h1>
+      <p class="intro">船已靠岸。洞口的巨兽，正在等你。<br>选择你的能力，打通通往雨林的路。</p>
+      <div class="hero-cards" role="group" aria-label="选择角色">
+        <button class="hero-card selected" data-hero="alex" aria-pressed="true"><span class="hero-icon electric">ϟ</span><span><strong>Alex</strong><small>电力发明家</small><b>电能脉冲 · 快速连击</b></span><i>✓</i></button>
+        <button class="hero-card" data-hero="victory" aria-pressed="false"><span class="hero-icon gravity">◈</span><span><strong>Victory</strong><small>重力魔法师</small><b>悬浮投石 · 蓄力重击</b></span><i>✓</i></button>
+      </div>
+      <button id="start" class="primary" disabled>正在准备岛屿…</button>
+      <p class="controls-note">触屏摇杆移动 · 按住技能攻击 <span>／ 键盘 WASD + 空格</span></p>
+    </div>
+    <div class="island-label"><span>01 / THE LANDING</span><strong>海滩上岸</strong><small>三头守卫 · 洞口领地</small></div>
+    <footer>单人冒险 · 两位创作者轮流体验 <span>首关原型</span></footer>
+  </main>
+  <div id="hud" hidden>
+    <header class="top-bar">
+      <div class="player-panel"><span id="portrait">ϟ</span><div><div class="health-label"><strong id="hero-name">Alex</strong><span id="player-hp">100 / 100</span></div><div class="health-track"><div id="player-fill"></div></div></div></div>
+      <div class="chapter"><span>CHAPTER 01</span><strong>海滩上岸</strong></div>
+      <div class="toolbar"><span class="crystals">◈ <b id="crystals">0</b></span><button id="sound" aria-label="关闭声音">♪</button><button id="pause" aria-label="暂停游戏">Ⅱ</button></div>
+    </header>
+    <div id="boss-panel" hidden><div class="boss-title"><span>三头守卫</span><small id="boss-state">守望洞口</small><b id="boss-hp">360 / 360</b></div><div class="health-track boss-track"><div id="boss-fill"></div></div></div>
+    <div id="objective"><span class="objective-icon">↟</span><div><small>当前目标</small><strong id="objective-text">沿着光点，走向山洞</strong></div></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="touch-controls">
+      <div id="joystick" role="region" aria-label="移动摇杆"><div class="joy-ring"></div><span class="joy-arrow">⌃</span><div id="stick"></div><small>移动</small></div>
+      <div class="skill-controls"><button id="dash" aria-label="冲刺躲避"><span>➜</span><small>冲刺</small><b id="dash-timer"></b></button><button id="attack" aria-label="使用主要技能"><span id="attack-icon">ϟ</span><strong id="attack-name">电能脉冲</strong><small id="attack-timer">按住释放</small><div id="cooldown"></div></button></div>
+    </div>
+    <div class="bottom-hint">离开红圈躲避 <span>·</span> 击败守卫后进入山洞</div>
+  </div>
+  <div id="damage-flash"></div>
+  <section id="result" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="result-title"><div class="result-card"><span id="result-symbol">✦</span><p class="eyebrow" id="result-kicker">CHAPTER COMPLETE</p><h2 id="result-title">通往雨林的路，打开了！</h2><p id="result-copy"></p><div id="result-stats"></div><button id="restart" class="primary">再玩一次</button><button id="change-hero" class="secondary">换一位探险家</button></div></section>
+  <section id="pause-menu" class="modal" hidden role="dialog" aria-modal="true" aria-labelledby="pause-title"><div class="result-card"><span class="pause-icon">Ⅱ</span><h2 id="pause-title">冒险暂停</h2><p>准备好了，就继续前进。</p><button id="resume" class="primary">继续冒险</button><button id="pause-change" class="secondary">返回角色选择</button></div></section>
+  <div id="load-error" hidden>场景未能启动。请刷新页面，或使用支持 WebGL 2 的浏览器。</div>
+  <script type="module" src="./game.js"></script>
+</body>
+</html>

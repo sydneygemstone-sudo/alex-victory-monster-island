@@ -1,0 +1,53 @@
+"""Actual Chrome/WebGL evidence. QA time advancement and scenario setup are explicitly labelled."""
+from pathlib import Path
+from playwright.sync_api import sync_playwright
+import json
+R=Path(__file__).resolve().parent.parent;out=R/'qa/v21';out.mkdir(exist_ok=True)
+checks=[];errors=[]
+def check(name,ok,detail=None):
+ checks.append({'name':name,'passed':bool(ok),'detail':detail});print(name,bool(ok),str(detail)[:180],flush=True)
+with sync_playwright() as pw:
+ browser=pw.chromium.launch(executable_path='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless=True)
+ page=browser.new_page(viewport={'width':1180,'height':820},has_touch=True,device_scale_factor=1)
+ page.set_default_timeout(15000)
+ page.on('pageerror',lambda e:errors.append(str(e)))
+ page.goto('http://127.0.0.1:8896/game/?qa=1&lang=en',wait_until='load',timeout=15000)
+ page.wait_for_function('!!window.islandTest',timeout=10000)
+ page.click('#solo')
+ snap=lambda:page.evaluate('islandDiagnostics.snapshot().state')
+ advance=lambda t:page.evaluate('(t)=>islandTest.advance(t)',t)
+ check('cinematic starts before controls',snap()['cinematic'] and not page.locator('#controls').is_visible())
+ shots=[2.8,7.5,12,17,21,25,29,34.5]
+ for i,t in enumerate(shots):
+  current=snap().get('storyClock',0);advance(max(0,t-current));page.wait_for_timeout(80)
+  page.screenshot(path=str(out/f'story-{i+1}.jpg'),type='jpeg',quality=82,timeout=10000)
+  check('shot '+str(i+1),str(i+1).zfill(2) in page.locator('#shotInfo').inner_text(),page.locator('#introText').inner_text())
+ advance(2)
+ check('cinema returns control on beach',snap()['phase']=='beach' and page.locator('#controls').is_visible())
+ page.evaluate('islandTest.position(0,-6)');advance(.10)
+ check('fight starts',snap()['phase']=='fight')
+ fired=page.evaluate('''()=>{const w=islandTest.world(),before=w.s.boss.hp;document.dispatchEvent(new KeyboardEvent('keydown',{code:'KeyE',key:'e',bubbles:true}));document.dispatchEvent(new KeyboardEvent('keyup',{code:'KeyE',key:'e',bubbles:true}));return {before,after:w.s.boss.hp,shots:w.s.playerShots.length};}''')
+ check('rail slug exists before impact',fired['shots']>0 and fired['after']==fired['before'],'Atomic DOM keyboard dispatch observes fire before a render frame; native keyboard controls exercised on other skills.')
+ advance(.45);page.wait_for_timeout(70)
+ check('rail slug damages on impact',snap()['boss']['hp']<fired['before'])
+ page.keyboard.press('q');advance(.13);page.wait_for_timeout(60)
+ page.screenshot(path=str(out/'rail-shot.jpg'),type='jpeg',quality=85)
+ check('numeric health and shot damage', '/' in page.locator('#challenge').inner_text() and '30' in page.locator('#combatStats').inner_text())
+ page.evaluate('islandTest.unlockSlam()');advance(.02);page.keyboard.press('r')
+ check('slam opens aim marker',bool(snap()['players'][0]['aim']) and page.locator('#aimHUD').is_visible())
+ page.screenshot(path=str(out/'slam-aim.jpg'),type='jpeg',quality=82)
+ page.keyboard.press('Enter');advance(.40);page.wait_for_timeout(60)
+ check('slam airborne',snap()['players'][0]['y']>3)
+ page.screenshot(path=str(out/'slam-air.jpg'),type='jpeg',quality=82)
+ advance(.75);page.wait_for_timeout(60)
+ check('slam impact event',any(e['type']=='slamImpact' for e in snap()['events']))
+ page.screenshot(path=str(out/'slam-impact.jpg'),type='jpeg',quality=85)
+ page.keyboard.press('Space');page.wait_for_timeout(80)
+ page.screenshot(path=str(out/'dash.jpg'),type='jpeg',quality=82)
+ page.click('#pause');page.locator('#numbers').uncheck()
+ check('numeric toggle hides detailed values',page.locator('body').evaluate('(e)=>e.classList.contains("hideNumbers")'))
+ page.locator('#numbers').check();check('roar asset decoded',page.evaluate('islandDiagnostics.snapshot().audio.roarLoaded'));page.click('#resume')
+ check('runtime errors',not errors,errors)
+ browser.close()
+(out/'report.json').write_text(json.dumps({'method':'Chrome/WebGL, 1180x820 touch emulation; actual keyboard controls; QA time advancement and position/unlock setup. Not physical iPad.','checks':checks,'errors':errors},ensure_ascii=False,indent=2))
+print('DONE',len(checks),flush=True)

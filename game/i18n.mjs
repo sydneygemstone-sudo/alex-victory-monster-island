@@ -43,3 +43,17 @@ export const TEXT={
 export function validLang(v){return LANGS.includes(v)?v:'en';}
 export function t(key,lang='en'){return TEXT[key]?.[LANGS.indexOf(validLang(lang))]??key;}
 export function initialLang(){let saved;try{saved=localStorage.getItem('island-language');}catch{}return validLang(new URLSearchParams(location.search).get('lang')||saved||'en');}
+
+Object.assign(TEXT,{
+ edition:['家庭试玩版 2.1','家庭試玩版 2.1','FAMILY EDITION 2.1'],attack:['电磁弹','電磁彈','RAIL SHOT'],special:['超载炮','超載炮','OVERCHARGE'],anchor:['跃起压砸','躍起壓砸','LEAP SLAM'],anchorDesc:['瞄准落点，跃起砸下；中心命中造成 260 基础伤害。','瞄準落點，躍起砸下；中心命中造成 260 基礎傷害。','Aim a landing point, leap and slam. A central hit deals 260 base damage.'],showNumbers:['显示伤害与数值','顯示傷害與數值','Damage numbers & statistics'],damage:['普攻','普攻','Shot'],specialDamage:['特殊','特殊','Special'],slamDamage:['压砸','壓砸','Slam'],aimTitle:['选择你的落点','選擇你的落點','CHOOSE YOUR LANDING'],aimHelp:['拖动地面或推摇杆瞄准；亮色内圈是高伤害区。','拖動地面或推搖桿瞄準；亮色內圈是高傷害區。','Drag the ground or use the stick to aim. The bright inner circle deals full damage.'],confirmSlam:['跃起压砸 · R / Enter','躍起壓砸 · R / Enter','LEAP & SLAM · R / Enter'],cancelAim:['取消瞄准','取消瞄準','Cancel aim'],prologue:['海岸上的警告','海岸上的警告','A WARNING ON THE SHORE'],
+ storyBoat:['Alex 和 Victory 带着装备，踏上未知的海岸。','Alex 和 Victory 帶著裝備，踏上未知的海岸。','Alex and Victory step ashore, prepared for the unknown.'],
+ storyWalk:['山洞就在前面。可那沉重的脚步声……','山洞就在前面。可那沉重的腳步聲……','The cave lies ahead. But those heavy footsteps…'],
+ storyHide:['嘘——躲到岩石后面。它在守着入口。','噓——躲到岩石後面。牠在守著入口。','Quiet. Behind the rock. Something is guarding the entrance.'],
+ storySnake:['一条五头蛇，正从侧面闯进它的领地。','一條五頭蛇，正從側面闖進牠的領地。','A five-headed serpent slithers into the guardian’s territory.'],
+ storyRoar:['三颗头同时抬起。警告声震动了整个海滩。','三顆頭同時抬起。警告聲震動了整個海灘。','Three heads rise. A warning roar shakes the shore.'],
+ storyDefy:['五头蛇没有逃。它昂起每一颗头，发出挑衅的嘶声。','五頭蛇沒有逃。牠昂起每一顆頭，發出挑釁的嘶聲。','The serpent does not flee. All five heads rise in defiance.'],
+ storyEat:['守卫猛扑、张口。五头蛇消失在巨口之中。','守衛猛撲、張口。五頭蛇消失在巨口之中。','The guardian lunges. Its jaws close around the serpent.'],
+ storyReady:['他们交换了一个眼神。现在，轮到你决定如何前进。','他們交換了一個眼神。現在，輪到你決定如何前進。','The explorers exchange a glance. Now you decide how to proceed.']
+});
+
+Object.assign(TEXT,{bolt:['电磁弹','電磁彈','RAIL SHOT'],beam:['超载电磁炮','超載電磁炮','OVERCHARGE'],alexDesc:['电磁弹有真实飞行轨迹；超载炮发射更大的高伤害弹丸。','電磁彈有真實飛行軌跡；超載炮發射更大的高傷害彈丸。','Fire visible rail slugs. Overcharge launches a larger, high-damage projectile.']});

@@ -1,0 +1,106 @@
+{
+  "method": "Chrome/WebGL, 1180x820 touch emulation; actual keyboard controls; QA time advancement and position/unlock setup. Not physical iPad.",
+  "checks": [
+    {
+      "name": "cinematic starts before controls",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "shot 1",
+      "passed": true,
+      "detail": "Alex and Victory step ashore, prepared for the unknown."
+    },
+    {
+      "name": "shot 2",
+      "passed": true,
+      "detail": "The cave lies ahead. But those heavy footsteps…"
+    },
+    {
+      "name": "shot 3",
+      "passed": true,
+      "detail": "Quiet. Behind the rock. Something is guarding the entrance."
+    },
+    {
+      "name": "shot 4",
+      "passed": true,
+      "detail": "A five-headed serpent slithers into the guardian’s territory."
+    },
+    {
+      "name": "shot 5",
+      "passed": true,
+      "detail": "Three heads rise. A warning roar shakes the shore."
+    },
+    {
+      "name": "shot 6",
+      "passed": true,
+      "detail": "The serpent does not flee. All five heads rise in defiance."
+    },
+    {
+      "name": "shot 7",
+      "passed": true,
+      "detail": "The guardian lunges. Its jaws close around the serpent."
+    },
+    {
+      "name": "shot 8",
+      "passed": true,
+      "detail": "The explorers exchange a glance. Now you decide how to proceed."
+    },
+    {
+      "name": "cinema returns control on beach",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fight starts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "rail slug exists before impact",
+      "passed": true,
+      "detail": "Atomic DOM keyboard dispatch observes fire before a render frame; native keyboard controls exercised on other skills."
+    },
+    {
+      "name": "rail slug damages on impact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "numeric health and shot damage",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "slam opens aim marker",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "slam airborne",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "slam impact event",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "numeric toggle hides detailed values",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "roar asset decoded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "runtime errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": []
+}

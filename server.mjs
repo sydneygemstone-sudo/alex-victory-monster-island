@@ -7,7 +7,7 @@ import {randomBytes} from 'node:crypto';
 import os from 'node:os';
 import {World,VERSION} from './game/core.mjs';
 const ROOT=path.dirname(fileURLToPath(import.meta.url));
-const TYPES={'.html':'text/html','.css':'text/css','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.md':'text/plain','.zip':'application/zip','.txt':'text/plain','.webmanifest':'application/manifest+json'};
+const TYPES={'.wav':'audio/wav','.mp3':'audio/mpeg','.ogg':'audio/ogg','.html':'text/html','.css':'text/css','.js':'text/javascript','.mjs':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.md':'text/plain','.zip':'application/zip','.txt':'text/plain','.webmanifest':'application/manifest+json'};
 function json(res,status,body){if(res.writableEnded)return;res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(body));}
 async function body(req){let text='';for await(const c of req){text+=c;if(text.length>4096)throw new Error('payload');}return JSON.parse(text||'{}');}
 export function createIslandServer({root=ROOT}={}){
@@ -42,7 +42,7 @@ export function createIslandServer({root=ROOT}={}){
      if(m.id!==0)return json(res,403,{error:'hostOnly'});
      if(r.members.length!==2||r.members.some(x=>!x.res))return json(res,409,{error:'waiting'});
      if(r.world&&!['dead','won'].includes(r.world.s.phase))return json(res,409,{error:'already started'});
-     r.world=new World({heroes:r.members.map(m=>m.hero)});for(const member of r.members)member.inputT=Date.now();broadcast(r);return json(res,200,{accepted:true});
+     r.world=new World({heroes:r.members.map(m=>m.hero)});r.world.startCinematic();for(const member of r.members)member.inputT=Date.now();broadcast(r);return json(res,200,{accepted:true});
     }
     return json(res,404,{error:'unknown route'});
    }

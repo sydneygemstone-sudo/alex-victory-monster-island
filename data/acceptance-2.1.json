@@ -1,0 +1,388 @@
+{
+  "release": "2.1.0-beta.1",
+  "generated_at": "2026-09-21T16:05:55.778078+00:00",
+  "rules": {
+    "passed": 29,
+    "failed": 0,
+    "method": "Node authoritative rules plus independent HTTP/SSE clients"
+  },
+  "browser": {
+    "method": "Chrome/WebGL, 1180x820 touch emulation; actual keyboard controls; QA time advancement and position/unlock setup. Not physical iPad.",
+    "checks": [
+      {
+        "name": "cinematic starts before controls",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "shot 1",
+        "passed": true,
+        "detail": "Alex and Victory step ashore, prepared for the unknown."
+      },
+      {
+        "name": "shot 2",
+        "passed": true,
+        "detail": "The cave lies ahead. But those heavy footsteps…"
+      },
+      {
+        "name": "shot 3",
+        "passed": true,
+        "detail": "Quiet. Behind the rock. Something is guarding the entrance."
+      },
+      {
+        "name": "shot 4",
+        "passed": true,
+        "detail": "A five-headed serpent slithers into the guardian’s territory."
+      },
+      {
+        "name": "shot 5",
+        "passed": true,
+        "detail": "Three heads rise. A warning roar shakes the shore."
+      },
+      {
+        "name": "shot 6",
+        "passed": true,
+        "detail": "The serpent does not flee. All five heads rise in defiance."
+      },
+      {
+        "name": "shot 7",
+        "passed": true,
+        "detail": "The guardian lunges. Its jaws close around the serpent."
+      },
+      {
+        "name": "shot 8",
+        "passed": true,
+        "detail": "The explorers exchange a glance. Now you decide how to proceed."
+      },
+      {
+        "name": "cinema returns control on beach",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "fight starts",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "rail slug exists before impact",
+        "passed": true,
+        "detail": "Atomic DOM keyboard dispatch observes fire before a render frame; native keyboard controls exercised on other skills."
+      },
+      {
+        "name": "rail slug damages on impact",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "numeric health and shot damage",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "slam opens aim marker",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "slam airborne",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "slam impact event",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "numeric toggle hides detailed values",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "roar asset decoded",
+        "passed": true,
+        "detail": null
+      },
+      {
+        "name": "runtime errors",
+        "passed": true,
+        "detail": []
+      }
+    ],
+    "errors": []
+  },
+  "hub": {
+    "passed": true,
+    "pages": 8,
+    "languages": [
+      "zh-Hans",
+      "zh-Hant",
+      "en"
+    ],
+    "reports": [
+      {
+        "checks": [
+          {
+            "page": "index.html",
+            "missingImages": [],
+            "overflow": false
+          },
+          {
+            "page": "index.html",
+            "language": "zh-Hant",
+            "h1": "怪物島\n潮汐迴響",
+            "overflow": false
+          },
+          {
+            "page": "index.html",
+            "language": "en",
+            "h1": "An island.\nTwo extraordinary powers.",
+            "overflow": false
+          },
+          {
+            "page": "index.html",
+            "language": "zh-Hans",
+            "h1": "怪物岛\n潮汐回响",
+            "overflow": false
+          },
+          {
+            "page": "index.html",
+            "mobileOverflow": false
+          },
+          {
+            "page": "comparison.html",
+            "missingImages": [],
+            "overflow": false
+          },
+          {
+            "page": "comparison.html",
+            "language": "zh-Hant",
+            "h1": "好的 MVP，\n和穩健的產品，不是一張分數表。",
+            "overflow": false
+          },
+          {
+            "page": "comparison.html",
+            "language": "en",
+            "h1": "A compelling MVP and a robust product\nare not the same score.",
+            "overflow": false
+          },
+          {
+            "page": "comparison.html",
+            "language": "zh-Hans",
+            "h1": "好的 MVP，\n和稳健的产品，不是一张分数表。",
+            "overflow": false
+          },
+          {
+            "page": "costs.html",
+            "missingImages": [],
+            "overflow": false
+          },
+          {
+            "page": "costs.html",
+            "language": "zh-Hant",
+            "h1": "A$100 預算，\n每一筆從回執算起。",
+            "overflow": false
+          },
+          {
+            "page": "costs.html",
+            "language": "en",
+            "h1": "An A$100 budget.\nEvery measured dollar traced to usage.",
+            "overflow": false
+          },
+          {
+            "page": "costs.html",
+            "language": "zh-Hans",
+            "h1": "A$100 预算，\n每一笔从回执算起。",
+            "overflow": false
+          },
+          {
+            "page": "cinematic.html",
+            "missingImages": [],
+            "overflow": false
+          },
+          {
+            "page": "cinematic.html",
+            "language": "zh-Hant",
+            "h1": "先讓你看懂危險，\n再把控制權交給你。",
+            "overflow": false
+          },
+          {
+            "page": "cinematic.html",
+            "language": "en",
+            "h1": "Understand the danger.\nThen take control.",
+            "overflow": false
+          },
+          {
+            "page": "cinematic.html",
+            "language": "zh-Hans",
+            "h1": "先让你看懂危险，\n再把控制权交给你。",
+            "overflow": false
+          }
+        ],
+        "errors": [],
+        "passed": true
+      },
+      {
+        "checks": [
+          {
+            "page": "parents.html",
+            "missingImages": [],
+            "overflow": false
+          },
+          {
+            "page": "parents.html",
+            "language": "zh-Hant",
+            "h1": "他們沒有逐行寫程式。\n但他們在真正地創作。",
+            "overflow": false
+          },
+          {
+            "page": "parents.html",
+            "language": "en",
+            "h1": "They did not type every line.\nThey still made the creative decisions.",
+            "overflow": false
+          },
+          {
+            "page": "parents.html",
+            "language": "zh-Hans",
+            "h1": "他们没有逐行写代码。\n但他们在真正地创造。",
+            "overflow": false
+          },
+          {
+            "page": "development.html",
+            "missingImages": [],
+            "overflow": false
+          },
+          {
+            "page": "development.html",
+            "language": "zh-Hant",
+            "h1": "每一條回饋，\n都應該在遊戲裡留下變化。",
+            "overflow": false
+          },
+          {
+            "page": "development.html",
+            "language": "en",
+            "h1": "Every piece of feedback\nshould change something you can see.",
+            "overflow": false
+          },
+          {
+            "page": "development.html",
+            "language": "zh-Hans",
+            "h1": "每一条反馈，\n都应该在游戏里留下变化。",
+            "overflow": false
+          },
+          {
+            "page": "review.html",
+            "missingImages": [],
+            "overflow": false
+          },
+          {
+            "page": "review.html",
+            "language": "zh-Hant",
+            "h1": "不要只說「好玩」。\n告訴我們，哪裡變好了。",
+            "overflow": false
+          },
+          {
+            "page": "review.html",
+            "language": "en",
+            "h1": "Not just “it is fun.”\nTell us what improved.",
+            "overflow": false
+          },
+          {
+            "page": "review.html",
+            "language": "zh-Hans",
+            "h1": "不要只说“好玩”。\n告诉我们，哪里变好了。",
+            "overflow": false
+          },
+          {
+            "page": "play-guide.html",
+            "missingImages": [],
+            "overflow": false
+          },
+          {
+            "page": "play-guide.html",
+            "language": "zh-Hant",
+            "h1": "一個人，直接開啟。\n兩個人，同一張海島地圖。",
+            "overflow": false
+          },
+          {
+            "page": "play-guide.html",
+            "language": "en",
+            "h1": "Solo: open the page.\nCo-op: share the island.",
+            "overflow": false
+          },
+          {
+            "page": "play-guide.html",
+            "language": "zh-Hans",
+            "h1": "一个人，直接打开。\n两个人，同一张海岛地图。",
+            "overflow": false
+          }
+        ],
+        "errors": [],
+        "passed": true
+      }
+    ]
+  },
+  "original_startups": {
+    "web": {
+      "key": "web",
+      "method": "Chrome 1180x820 actual original; start and 0.8s forward movement only. Not a full completion test.",
+      "errors": [],
+      "canvas": 1
+    },
+    "astra": {
+      "key": "astra",
+      "method": "Chrome 1180x820 actual original; start and 0.8s forward movement only. Not a full completion test.",
+      "errors": [],
+      "canvas": 1
+    },
+    "opus": {
+      "key": "opus",
+      "method": "Chrome 1180x820 actual original; start and 0.8s forward movement only. Not a full completion test.",
+      "errors": [],
+      "canvas": 1
+    },
+    "glm": {
+      "key": "glm",
+      "method": "Chrome 1180x820 actual original; start and 0.8s forward movement only. Not a full completion test.",
+      "errors": [],
+      "canvas": 1
+    }
+  },
+  "originals_unchanged": true,
+  "astra_mirror": "HTML path-only compatibility adaptation; game.js/combat.js byte-identical",
+  "syntax_passed": [
+    "game/audio.mjs",
+    "game/polish.mjs",
+    "game/i18n.mjs",
+    "game/view.mjs",
+    "game/client.mjs",
+    "game/core.mjs",
+    "game/story.mjs",
+    "server.mjs",
+    "site-v21.mjs"
+  ],
+  "unverified": [
+    "Physical iPad and Safari",
+    "Human listening evaluation on tablet speakers",
+    "Public internet co-op backend not deployed",
+    "Web request token billing unavailable"
+  ],
+  "sha256": {
+    "game/core.mjs": "7cdeb718ff543440e04765086ed7fb60fc5cf47f7e131b99b7beb0f0c7100e5a",
+    "game/view.mjs": "0ac9bafa6b6fbad0d6de6500a44aa2c43d6ac43c176a5194e3cfaaa14c85cc30",
+    "game/story.mjs": "b38cf5721d06e625519ba7784ce5c02a3bab73656bac7f3ce4e61c4e358219b4",
+    "game/polish.mjs": "1c1278344f38052b4ade1080218169b06e9752abec870bcfebdae7f6cd95acef",
+    "game/client.mjs": "669aee2f4583ca8854c0549799efc19d04c13b520127e32054bb435e22415758",
+    "game/audio.mjs": "cb53f75c27acb1f824d2783700862b970724d2cf15cbe837ab6f4b1135a63e56",
+    "game/game.css": "f23dc1f4154bf3ac7830700f22d640237f26cf8049b15a5eb256377e64750709",
+    "game/i18n.mjs": "9af8fa02727bdeea63be8d7855d2189da8e50a1795c6cb1076e560ab818de64f",
+    "game/index.html": "120afa1a94f3d6ef97be72b48c871473e227bdb999e444233608ca5c69eaaec9",
+    "server.mjs": "31b7e456abc6dc47bf0c65580655676ca69adf64c1dd446cf3d91b485ad8469c",
+    "site-v21.mjs": "7f807a596b65bf7de87204988d2d964ee66e70532460ba2d9d72fedc9f4d56dc",
+    "site-v21.css": "10474d980a37cba22bf1b11b932569a2d1ec6ce61e12802f0e0cb475bf2718aa",
+    "index.html": "1506d6b92203552abc284fe071a88deed9ab30a4be200a353879af59c731febf",
+    "data/costs-2.1.json": "9db6548be6a9f382ead57d4f08802c111b69ffceed5518cb6cefeebeba8c9e07",
+    "data/comparison-2.1.json": "220d36c1e5a094b22efb76952c3ee461505cebf9e7969d4f9148fc68506a2a7d"
+  }
+}

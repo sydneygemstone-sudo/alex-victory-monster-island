@@ -1,4 +1,5 @@
 /** Visual foundation: the frozen Web 6Pro classroom build. Rules live in core.mjs. */
+import {createPolish} from './polish.mjs';
 export function createView(canvas){
  const THREE=window.THREE;if(!THREE)throw new Error('3D engine missing');
  const TAU=Math.PI*2,clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
@@ -82,6 +83,7 @@ const chest=group([0,0,-25]);chest.visible=false;mesh(geo.box,'#7b5138',[0,.53,0
  const snake=group([0,.3,-4]);for(let i=0;i<9;i++)mesh(geo.sphere,'#758e61',[Math.sin(i*.6)*.3,.3,i*.35],[.25,.22,.32],snake);
  for(let i=0;i<5;i++){const x=(i-2)*.35;const neck=mesh(geo.cyl,'#8caa69',[x,.72,-.32],[.10,.9,.1],snake);neck.rotation.z=-(i-2)*.18;mesh(geo.sphere,'#a6be78',[x*1.2,1.25,-.35],[.2,.25,.3],snake);}
  const dust=group([0,1,-14]);for(let i=0;i<12;i++)mesh(geo.sphere,new THREE.MeshBasicMaterial({color:'#d8c49a',transparent:true,opacity:.7}),[Math.sin(i)*2,rand()*2,Math.cos(i)*2],[.7,.7,.7],dust);
+ const polish=createPolish(THREE,scene,camera,heroes,bossRoot,bossBody,heads);
  const fx=[];let lastEvent=0,hitTime=-100,lastPhase='',lastT=-1;
  function transient(m,life,scale=1){m.castShadow=false;fx.push({m,life,max:life,scale});}
  function pulseAt(x,z,color,size){const m=ring(x,z,.1,color,.8);transient(m,.48,size);}
@@ -97,15 +99,15 @@ const chest=group([0,0,-25]);chest.visible=false;mesh(geo.box,'#7b5138',[0,.53,0
   const t=s.t,p=s.players[id]||s.players[0],b=s.boss;
   if(t<lastT){lastEvent=0;hitTime=-100;}lastT=t;
   for(const e of s.events)if(e.id>lastEvent){effectsFor(e,s);lastEvent=e.id;}
-  const active=['fight','intro'].includes(s.phase);barrier.visible=active;
-  const shown=new Set();for(const pl of s.players){const h=heroes[pl.hero==='alex'?0:1];shown.add(h);h.g.visible=true;h.g.position.lerp(new THREE.Vector3(pl.x,pl.dash>0?.18:0,pl.z),Math.min(1,dt*18));
+  const active=s.phase==='fight';barrier.visible=active;
+  const shown=new Set();for(const pl of s.players){const h=heroes[pl.hero==='alex'?0:1];shown.add(h);h.g.visible=true;h.g.position.lerp(new THREE.Vector3(pl.x,(pl.y||0)+(pl.dash>0?.18:0),pl.z),Math.min(1,dt*18));
    const a=Math.atan2(pl.dx,pl.dz);h.g.rotation.y+=Math.atan2(Math.sin(a-h.g.rotation.y),Math.cos(a-h.g.rotation.y))*Math.min(1,dt*12);
    const moved=h.last?Math.hypot(pl.x-h.last.x,pl.z-h.last.z):0;h.last={x:pl.x,z:pl.z};h.body.position.y=reduced?0:(moved>.005?Math.abs(Math.sin(t*13))*.08:Math.sin(t*2)*.025);
    h.legs.forEach((l,i)=>l.rotation.x=moved>.005?Math.sin(t*13+i*Math.PI)*.5:0);h.arms.forEach((l,i)=>l.rotation.x=pl.holding!==null?-1.1:moved>.005?-Math.sin(t*13+i*Math.PI)*.4:0);
    h.aura.visible=pl.hp>0;h.aura.position.set(pl.x,.23,pl.z);h.aura.scale.setScalar(pl.anchor>0?1.7:.9);h.aura.material.color.set(pl.anchor>0?'#ffd17c':pl.hero==='alex'?'#9ae7e9':'#ceb3ff');h.g.rotation.z=pl.hp<=0?Math.PI*.48:0;
   }heroes.forEach(h=>{if(!shown.has(h)){h.g.visible=false;h.aura.visible=false;}});
-  bossRoot.position.lerp(new THREE.Vector3(b.x,0,b.z),Math.min(1,dt*20));bossRoot.visible=b.hp>0;const a=Math.atan2(p.x-b.x,p.z-b.z);bossRoot.rotation.y+=Math.atan2(Math.sin(a-bossRoot.rotation.y),Math.cos(a-bossRoot.rotation.y))*Math.min(1,dt*5);
-  bossBody.position.y=(b.stun>0?.65:0)+(reduced?0:Math.sin(t*2)*.10);bossBody.rotation.z=b.stun>0?Math.sin(t*7)*.035:0;
+  bossRoot.position.lerp(new THREE.Vector3(b.x,b.y||0,b.z),Math.min(1,dt*20));bossRoot.visible=b.hp>0;const a=Math.atan2(p.x-b.x,p.z-b.z);bossRoot.rotation.y+=Math.atan2(Math.sin(a-bossRoot.rotation.y),Math.cos(a-bossRoot.rotation.y))*Math.min(1,dt*5);
+  bossBody.position.y=(b.stun>0?.65:b.windup>0&&b.attack==='stomp'?-.65*(1-b.windup/1.45):0)+(reduced?0:Math.sin(t*2)*.10);bossBody.rotation.z=b.stun>0?Math.sin(t*7)*.035:0;
   heads.forEach((h,i)=>{h.rotation.x=b.windup>0?-.22:Math.sin(t*1.6+i)*.04;});bossLegs.forEach((l,i)=>l.rotation.x=active&&!b.windup&&!b.stun?Math.sin(t*5+i*Math.PI)*.17:0);tail.rotation.z=Math.sin(t*2)*.1;
   bossMats.forEach(m=>{m.emissive.set(t-hitTime<.13?'#b3ffff':b.enraged?'#8a4129':'#000000');m.emissiveIntensity=t-hitTime<.13?.5:b.enraged?.22:0;});
   bossAura.visible=b.hp>0;bossAura.position.set(b.x,.22,b.z);boundary.visible=s.phase==='beach';boundary.position.set(0,.24,-17);boundary.scale.setScalar(18);
@@ -115,20 +117,21 @@ const chest=group([0,0,-25]);chest.visible=false;mesh(geo.box,'#7b5138',[0,.53,0
   for(const r of s.rocks){const m=ammo[r.id];m.visible=r.status!=='cooldown';m.position.set(r.x,r.y+.12,r.z);m.rotation.y=r.status==='ground'?r.id:t*3;ammoRings[r.id].visible=p.hero==='victory'&&r.status==='ground'&&Math.hypot(p.x-r.x,p.z-r.z)<7.5;ammoRings[r.id].position.set(r.x,.23,r.z);}
   missiles.forEach((m,i)=>{const q=s.shots[i];m.visible=!!q;if(q){m.position.set(q.x,1,q.z);m.rotation.y=Math.atan2(q.vx,q.vz);}});
   marks.forEach(m=>m.visible=false);lanes.forEach(m=>m.visible=false);
-  if(b.windup>0){dangerMat.opacity=reduced?.35:.30+Math.sin(t*9)*.08;
+  if(b.windup>0||b.leap){dangerMat.opacity=reduced?.35:.30+Math.sin(t*9)*.08;
    if(b.attack==='stomp'){b.targets.forEach((a,i)=>{const m=marks[i];if(m){m.visible=true;m.position.set(a.x,.26,a.z);m.scale.setScalar(a.r);}});}
    if(b.attack==='roar'){const m=marks[0];m.visible=true;m.position.set(b.x,.26,b.z);m.scale.setScalar(18);}
    if(b.attack==='charge'||b.attack==='breath'){b.targets.forEach((a,i)=>{const m=lanes[i];if(!m)return;const d=Math.hypot(a.x-b.x,a.z-b.z);m.visible=true;m.position.set((a.x+b.x)/2,.30,(a.z+b.z)/2);m.scale.set(b.attack==='charge'?6:5,.025,d);m.rotation.y=Math.atan2(a.x-b.x,a.z-b.z);});}
   }
-  snake.visible=s.phase==='intro'&&s.intro>1.2;dust.visible=s.phase==='intro'&&s.intro<=1.4;
+  snake.visible=false;dust.visible=false;
   if(s.phase==='intro'){snake.position.set(Math.sin(t*4)*.3,.2,-4-(4.4-s.intro)*3.1);snake.scale.setScalar(s.intro<1.7?Math.max(.1,(s.intro-1.2)*2):1);dust.scale.setScalar(1+(1.4-s.intro)*.6);}
   if(lastPhase!==s.phase){lastPhase=s.phase;if(menu){camera.position.set(20,12,21);cameraTarget.set(0,3,-14);}}
   let targetPos,look;if(menu||s.phase==='intro'){targetPos=new THREE.Vector3(17,9,10);look=new THREE.Vector3(0,3,-14);}
   else{const fighters=active?[...s.players.filter(q=>q.hp>0),b]:[p];const xs=fighters.map(q=>q.x),zs=fighters.map(q=>q.z);const minx=Math.min(...xs),maxx=Math.max(...xs),minz=Math.min(...zs),maxz=Math.max(...zs);const spanx=maxx-minx,spanz=maxz-minz,cx=(maxx+minx)*.5;
    const back=Math.max(14+spanz*.35,(spanx+12)/(2*Math.tan(54*Math.PI/360)*camera.aspect));targetPos=new THREE.Vector3(cx,9.6+back*.12,maxz+back);look=new THREE.Vector3(cx,2.2,(maxz+minz)*.5-2);}
-  camera.position.lerp(targetPos,1-Math.exp(-dt*4));cameraTarget.lerp(look,1-Math.exp(-dt*5));camera.lookAt(cameraTarget);
+  if(!s.cinematic){camera.position.lerp(targetPos,1-Math.exp(-dt*4));cameraTarget.lerp(look,1-Math.exp(-dt*5));camera.lookAt(cameraTarget);}
   if(!s.paused){for(let i=fx.length-1;i>=0;i--){const f=fx[i];f.life-=dt;f.m.material.opacity=Math.max(0,f.life/f.max);if(f.scale>1)f.m.scale.setScalar(.2+(1-f.life/f.max)*f.scale);if(f.life<=0){scene.remove(f.m);if(f.m.isLine)f.m.geometry.dispose();f.m.material.dispose();fx.splice(i,1);}}}
+  const shot=polish.update(s,id,dt,reduced);if(shot){camera.position.lerp(new THREE.Vector3(...shot.eye),1-Math.exp(-dt*8));cameraTarget.set(...shot.look);camera.lookAt(cameraTarget);}else if(!(b.charge>0))bossBody.rotation.x=0;
   renderer.render(scene,camera);
  }
- return {update,resize,diagnostics:()=>({calls:renderer.info.render.calls,triangles:renderer.info.render.triangles,geometries:renderer.info.memory.geometries})};
+ return {update,resize,project:polish.project,ground:polish.ground,diagnostics:()=>({calls:renderer.info.render.calls,triangles:renderer.info.render.triangles,geometries:renderer.info.memory.geometries})};
 }

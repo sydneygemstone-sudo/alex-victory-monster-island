@@ -1,0 +1,10 @@
+{
+  "release": "2.1.0-beta.1",
+  "date": "2026-09-22",
+  "entry": "game/",
+  "hub": "index.html",
+  "acceptance": "data/acceptance-2.1.json",
+  "costs": "data/costs-2.1.json",
+  "notes": "docs/RELEASE-2.1.md",
+  "package": "Monster-Island-2.1.zip"
+}

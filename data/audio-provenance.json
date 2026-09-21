@@ -1,0 +1,10 @@
+{
+  "file": "game/assets/guardian-roar.wav",
+  "origin": "Original procedural formant/subharmonic/noise synthesis. No stock samples. Replaceable classroom audio placeholder.",
+  "duration_s": 3.1,
+  "sample_rate": 24000,
+  "peak": 0.88,
+  "rms": 0.24703507932030955,
+  "sha256": "45c971c3ffbdaff3043fc9f863403e4080c74c7fda3a60702135bd9e0d179fc5",
+  "generator": "qa/bake-roar.py"
+}

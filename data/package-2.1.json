@@ -1,0 +1,9 @@
+{
+  "release": "2.1.0-beta.1",
+  "file": "Monster-Island-2.1.zip",
+  "bytes": 4661089,
+  "sha256": "7ee5c417a1226de66f12b1064f4cb03a94f775713fda9b302ff215d3322941b7",
+  "files": 112,
+  "contents": "2.1 game, trilingual hub, four unchanged originals and archives, path-compatible Astra mirror, LAN server, token ledger, retrospective and regression evidence",
+  "excludes": "Private transcripts, session receipts, credentials, git metadata and development migration scripts"
+}

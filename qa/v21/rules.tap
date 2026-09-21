@@ -1,0 +1,184 @@
+TAP version 13
+# Subtest: save validation rejects NaN, infinity, negatives and excessive upgrades
+ok 1 - save validation rejects NaN, infinity, negatives and excessive upgrades
+  ---
+  duration_ms: 8.608
+  type: 'test'
+  ...
+# Subtest: distant player is safe and approaching starts only within territory
+ok 2 - distant player is safe and approaching starts only within territory
+  ---
+  duration_ms: 15.909917
+  type: 'test'
+  ...
+# Subtest: committed battle does not reset by running back to shore
+ok 3 - committed battle does not reset by running back to shore
+  ---
+  duration_ms: 2.932166
+  type: 'test'
+  ...
+# Subtest: two-player boss HP is exactly twice single at each round
+ok 4 - two-player boss HP is exactly twice single at each round
+  ---
+  duration_ms: 2.709
+  type: 'test'
+  ...
+# Subtest: two-stage gravity uses a persistent environmental stone
+ok 5 - two-stage gravity uses a persistent environmental stone
+  ---
+  duration_ms: 10.865042
+  type: 'test'
+  ...
+# Subtest: a rock is atomically reserved and cannot be picked up by two players
+ok 6 - a rock is atomically reserved and cannot be picked up by two players
+  ---
+  duration_ms: 0.635459
+  type: 'test'
+  ...
+# Subtest: telegraphed attack does not apply early damage, then hits
+ok 7 - telegraphed attack does not apply early damage, then hits
+  ---
+  duration_ms: 2.648834
+  type: 'test'
+  ...
+# Subtest: boss cycles through four attack families including ranged projectiles
+ok 8 - boss cycles through four attack families including ranged projectiles
+  ---
+  duration_ms: 0.797791
+  type: 'test'
+  ...
+# Subtest: heavy ability is gated, reduces damage and blocks knockback
+ok 9 - heavy ability is gated, reduces damage and blocks knockback
+  ---
+  duration_ms: 2.18975
+  type: 'test'
+  ...
+# Subtest: dash has real invulnerability and cooldown
+ok 10 - dash has real invulnerability and cooldown
+  ---
+  duration_ms: 3.020542
+  type: 'test'
+  ...
+# Subtest: gravity interrupts windup and cannot go negative
+ok 11 - gravity interrupts windup and cannot go negative
+  ---
+  duration_ms: 1.79425
+  type: 'test'
+  ...
+# Subtest: reward, purchase and growth loop applies exactly once
+ok 12 - reward, purchase and growth loop applies exactly once
+  ---
+  duration_ms: 0.885042
+  type: 'test'
+  ...
+# Subtest: invalid input cannot teleport, set HP, exceed speed, or poison state
+ok 13 - invalid input cannot teleport, set HP, exceed speed, or poison state
+  ---
+  duration_ms: 0.421917
+  type: 'test'
+  ...
+# Subtest: pause freezes state, flushes input and requires both clients connected
+ok 14 - pause freezes state, flushes input and requires both clients connected
+  ---
+  duration_ms: 1.694667
+  type: 'test'
+  ...
+# Subtest: all-player defeat ends battle, single downed partner does not
+ok 15 - all-player defeat ends battle, single downed partner does not
+  ---
+  duration_ms: 0.347
+  type: 'test'
+  ...
+# Subtest: swept collision catches fast projectile crossing a target
+ok 16 - swept collision catches fast projectile crossing a target
+  ---
+  duration_ms: 0.310041
+  type: 'test'
+  ...
+# Subtest: every game translation key has three nonempty language values
+ok 17 - every game translation key has three nonempty language values
+  ---
+  duration_ms: 1.191375
+  type: 'test'
+  ...
+# Subtest: alex completes a rules-driven fight and claims the chest without damage shortcuts
+ok 18 - alex completes a rules-driven fight and claims the chest without damage shortcuts
+  ---
+  duration_ms: 26.332458
+  type: 'test'
+  ...
+# Subtest: victory completes a rules-driven fight and claims the chest without damage shortcuts
+ok 19 - victory completes a rules-driven fight and claims the chest without damage shortcuts
+  ---
+  duration_ms: 34.418583
+  type: 'test'
+  ...
+# Subtest: two independent HTTP/SSE clients share a server-authoritative co-op run
+ok 20 - two independent HTTP/SSE clients share a server-authoritative co-op run
+  ---
+  duration_ms: 916.995291
+  type: 'test'
+  ...
+# Subtest: rail slug has travel time and applies exactly one impact
+ok 21 - rail slug has travel time and applies exactly one impact
+  ---
+  duration_ms: 13.198083
+  type: 'test'
+  ...
+# Subtest: rail overcharge and upgrade change real damage, not only labels
+ok 22 - rail overcharge and upgrade change real damage, not only labels
+  ---
+  duration_ms: 2.106542
+  type: 'test'
+  ...
+# Subtest: aim is bounded and does not move the player
+ok 23 - aim is bounded and does not move the player
+  ---
+  duration_ms: 1.435375
+  type: 'test'
+  ...
+# Subtest: slam launches visibly, lands only after flight and deals central damage
+ok 24 - slam launches visibly, lands only after flight and deals central damage
+  ---
+  duration_ms: 2.413833
+  type: 'test'
+  ...
+# Subtest: slam aimed away misses and still consumes cooldown
+ok 25 - slam aimed away misses and still consumes cooldown
+  ---
+  duration_ms: 1.4065
+  type: 'test'
+  ...
+# Subtest: cancelled aim consumes neither health nor cooldown
+ok 26 - cancelled aim consumes neither health nor cooldown
+  ---
+  duration_ms: 1.233708
+  type: 'test'
+  ...
+# Subtest: boss jump has flight before ground damage and releases impact events
+ok 27 - boss jump has flight before ground damage and releases impact events
+  ---
+  duration_ms: 4.77825
+  type: 'test'
+  ...
+# Subtest: cinematic has eight shots, no combat input/damage, and deterministic handoff
+ok 28 - cinematic has eight shots, no combat input/damage, and deterministic handoff
+  ---
+  duration_ms: 25.904125
+  type: 'test'
+  ...
+# Subtest: pause freezes both player and boss airborne state
+ok 29 - pause freezes both player and boss airborne state
+  ---
+  duration_ms: 8.867917
+  type: 'test'
+  ...
+1..29
+# tests 29
+# suites 0
+# pass 29
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1651.581
