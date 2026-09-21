@@ -1,0 +1,130 @@
+{
+  "checked_at": "2026-09-21T23:28:01.186291+10:00",
+  "base": "https://sydneygemstone-sudo.github.io/alex-victory-monster-island/",
+  "method": "HTTP status, body retrieval and core source SHA only. Does not verify rendering or gameplay.",
+  "checks": [
+    {
+      "path": "",
+      "status": 200,
+      "bytes": 785,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "game/",
+      "status": 200,
+      "bytes": 4445,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "game/client.mjs",
+      "status": 200,
+      "bytes": 13734,
+      "content_type": "text/javascript; charset=utf-8"
+    },
+    {
+      "path": "game/core.mjs",
+      "status": 200,
+      "bytes": 12827,
+      "content_type": "text/javascript; charset=utf-8",
+      "sha256": "b466f4b842d15c6cdea87d54bb50df6f2a0e21cbda760988454dc0f24556c57e",
+      "matches_local": true
+    },
+    {
+      "path": "game/vendor/three.min.js",
+      "status": 200,
+      "bytes": 669884,
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "parents.html?lang=zh-Hans",
+      "status": 200,
+      "bytes": 785,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "parents.html?lang=zh-Hant",
+      "status": 200,
+      "bytes": 785,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "parents.html?lang=en",
+      "status": 200,
+      "bytes": 785,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "comparison.html",
+      "status": 200,
+      "bytes": 785,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "development.html",
+      "status": 200,
+      "bytes": 785,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "review.html",
+      "status": 200,
+      "bytes": 785,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "data/comparison.json",
+      "status": 200,
+      "bytes": 4023,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "path": "data/budget.json",
+      "status": 200,
+      "bytes": 6358,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "path": "archive/manifest.json",
+      "status": 200,
+      "bytes": 5034,
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "path": "originals/candidate-a/index.html",
+      "status": 200,
+      "bytes": 10903,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "originals/candidate-b/index.html",
+      "status": 200,
+      "bytes": 6616,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "originals/candidate-b/node_modules/three/build/three.module.js",
+      "status": 200,
+      "bytes": 603113,
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "originals/codex-astra/play.html",
+      "status": 200,
+      "bytes": 4820,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "originals/web-6pro/index.html",
+      "status": 200,
+      "bytes": 18446,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "Monster-Island-2.0.zip",
+      "status": 200,
+      "bytes": 349794,
+      "content_type": "application/x-zip-compressed"
+    }
+  ],
+  "all_http_ok": true
+}

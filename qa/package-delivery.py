@@ -40,7 +40,7 @@ paths={
  '03':[str(p.relative_to(ROOT)) for p in (ROOT/'game').iterdir() if p.is_file()],
  '04':['server.mjs','package.json','start.command','start.cmd'],
  '05':['index.html','parents.html','comparison.html','development.html','review.html','site.mjs','site.css','assets/icon.svg'],
- '06':['README.md','docs/SPEC-2.0.md','docs/ACCEPTANCE.md','docs/BUDGET.md']+[str(p.relative_to(ROOT)) for p in (ROOT/'qa').iterdir() if p.suffix in ('.mjs','.py')],
+ '06':['README.md','docs/SPEC-2.0.md','docs/ACCEPTANCE.md','docs/BUDGET.md','docs/RELEASE-2.0.md']+[str(p.relative_to(ROOT)) for p in (ROOT/'qa').iterdir() if p.suffix in ('.mjs','.py')],
  '07':[]}
 ledger=json.loads((ROOT/'data/budget.json').read_text(encoding='utf-8'))
 rows=[]
@@ -60,13 +60,13 @@ dump('data/budget.json',ledger)
 original=json.loads((ROOT/'archive/manifest.json').read_text())
 footprint={'generated_at':stamp,'custom_text_token_equivalent':round(sum(x['unicode_characters'] for x in rows)/4),'method':'Unicode characters divided by four; output artifact footprint including reused custom text. Not billed model tokens or total task cost. Vendor, repeated ZIPs, original game bodies, input, reasoning and tool IO excluded.','illustrative_output_aud':round(sum(x['unicode_characters'] for x in rows)/4*50/1_000_000,4),'actual_total_task_cost_aud':None,'transport_base64_characters':71332,'transport_note':'Additional deployment envelope, not provider-token metering and not included in output footprint.','originals':[{'id':v['id'],'custom_text_token_equivalent':v['custom_text_token_equivalent'],'actual_cost_aud':None} for v in original['versions']],'files':rows}
 dump('data/delivery-footprint.json',footprint)
-# Ship a standalone runnable folder plus its hub and evidence. Original archives remain on the website.
+# Ship the game, complete hub and preserved classroom original builds.
 zip_path=ROOT/'Monster-Island-2.0.zip'
 names=['README.md','server.mjs','package.json','start.command','start.cmd','index.html','parents.html','comparison.html','development.html','review.html','site.mjs','site.css','.nojekyll']
-for directory in ['game','assets','data','docs','qa']:
-    names.extend(str(p.relative_to(ROOT)) for p in (ROOT/directory).rglob('*') if p.is_file() and p.suffix not in ('.log',))
+for directory in ['game','assets','data','docs','qa','originals','archive']:
+    names.extend(str(p.relative_to(ROOT)) for p in (ROOT/directory).rglob('*') if p.is_file() and p.suffix not in ('.log',) and str(p.relative_to(ROOT))!='data/package.json')
 with zipfile.ZipFile(zip_path,'w',zipfile.ZIP_DEFLATED) as z:
     for name in sorted(set(names)):z.write(ROOT/name,'Monster-Island-2.0/'+name)
-# Final bundle carries links to preserved originals online; they are not duplicated in this ZIP.
-dump('data/package.json',{'file':zip_path.name,'bytes':zip_path.stat().st_size,'sha256':sha(zip_path.read_bytes()),'contains':'New game, vendored engine, LAN server, tri-language hub, docs and QA. Original builds are separate archives on the public hub.'})
+# Package hash stays outside the archive to avoid a self-referential stale checksum.
+dump('data/package.json',{'file':zip_path.name,'bytes':zip_path.stat().st_size,'sha256':sha(zip_path.read_bytes()),'contains':'New game, vendored engine, LAN server, trilingual hub, docs, QA and all four preserved classroom original builds and archives.'})
 print(json.dumps({'syntax_passed':len(syntax),'new_tests_passed':20,'original_tests_passed':14,'text_equivalent':footprint['custom_text_token_equivalent'],'illustrative_output_aud':footprint['illustrative_output_aud'],'bundle_bytes':zip_path.stat().st_size,'bundle_sha256':sha(zip_path.read_bytes())},indent=2))

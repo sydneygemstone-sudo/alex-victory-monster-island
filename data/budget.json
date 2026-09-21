@@ -24,7 +24,7 @@
       "delivered_text_equivalent": 1258,
       "illustrative_output_aud": 0.0629,
       "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
-      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+      "recorded_at": "2026-09-21T23:30:44.509093+10:00"
     },
     {
       "id": "02",
@@ -43,7 +43,7 @@
       "delivered_text_equivalent": 2099,
       "illustrative_output_aud": 0.1049,
       "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
-      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+      "recorded_at": "2026-09-21T23:30:44.509093+10:00"
     },
     {
       "id": "03",
@@ -63,7 +63,7 @@
       "delivered_text_equivalent": 17930,
       "illustrative_output_aud": 0.8965,
       "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
-      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+      "recorded_at": "2026-09-21T23:30:44.509093+10:00"
     },
     {
       "id": "04",
@@ -82,7 +82,7 @@
       "delivered_text_equivalent": 1950,
       "illustrative_output_aud": 0.0975,
       "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
-      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+      "recorded_at": "2026-09-21T23:30:44.509093+10:00"
     },
     {
       "id": "05",
@@ -104,7 +104,7 @@
       "delivered_text_equivalent": 10228,
       "illustrative_output_aud": 0.5114,
       "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
-      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+      "recorded_at": "2026-09-21T23:30:44.509093+10:00"
     },
     {
       "id": "06",
@@ -119,11 +119,11 @@
       "actual_input_tokens": null,
       "actual_output_tokens": null,
       "actual_cost_aud": null,
-      "delivered_characters": 29397,
-      "delivered_text_equivalent": 7349,
-      "illustrative_output_aud": 0.3675,
+      "delivered_characters": 32817,
+      "delivered_text_equivalent": 8204,
+      "illustrative_output_aud": 0.4102,
       "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
-      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+      "recorded_at": "2026-09-21T23:30:44.509093+10:00"
     },
     {
       "id": "07",
@@ -139,7 +139,7 @@
       "delivered_text_equivalent": 0,
       "illustrative_output_aud": 0.0,
       "quantity_note": "Unicode characters / 4; not measured tokens. Includes retained/reused custom code. Excludes vendor, repeated packaging, prompts, reasoning and tools.",
-      "recorded_at": "2026-09-21T23:23:11.175894+10:00"
+      "recorded_at": "2026-09-21T23:30:44.509093+10:00"
     }
   ],
   "history_note": "All four historical provider bills remain unknown. Historical source footprints are in archive/manifest.json. Unknown is not zero."
